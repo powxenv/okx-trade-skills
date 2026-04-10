@@ -1,0 +1,3 @@
+display_name: "OKX Trading"
+short_description: "Comprehensive on-chain trading - research, analyze, scan security, track smart money, swap tokens, manage DeFi yield, trade memes, and manage wallets"
+default_prompt: "Help me trade on-chain. I want to research a token, check if it's safe, and execute a swap."
