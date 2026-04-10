@@ -1,0 +1,3 @@
+display_name: "X Layer Agent"
+short_description: "Autonomous trading, earning, and competing on X Layer — zero-gas agent operations for the Build X Hackathon"
+default_prompt: "Help me set up an autonomous trading agent on X Layer. I want it to monitor smart money signals, execute trades, and earn yield on X Layer's zero-gas L2."

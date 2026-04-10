@@ -1,0 +1,3 @@
+display_name: "OKX Uniswap"
+short_description: "Uniswap protocol integration for agents — V3 concentrated liquidity, Trading API swaps, x402 payments, and LP rebalancing on X Layer"
+default_prompt: "Help me interact with Uniswap on X Layer. I want to manage a V3 liquidity position, execute swaps via Uniswap, or set up an auto-rebalancing agent."

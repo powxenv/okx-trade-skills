@@ -253,6 +253,9 @@ Beyond the technical CLI workflows, use these references when the user needs hel
 | "How much should I risk?" / Position sizing | `references/trading-strategies.md` | Position sizing rules, entry/exit strategies, DCA, scaling |
 | "How do I manage risk?" / Portfolio protection | `references/risk-management.md` | Risk categories, portfolio limits, IL management, emergency procedures |
 | "How do I analyze this token?" / Market signals | `references/market-analysis.md` | Token evaluation framework, on-chain methods, smart money interpretation |
+| Trading on X Layer / Zero-gas strategies | `references/xlayer-strategies.md` | X Layer advantages, gas-free DeFi, OKB strategies, fast finality patterns |
+| Building autonomous agents / Automated trading | `references/agent-automation.md` | Agent decision logic, monitoring loops, silent mode rules, risk limits, workflow templates |
+| Uniswap integration / V3 LP strategies | `references/uniswap-integration.md` | V3 concentrated liquidity, LP strategies, combining Onchain OS with Uniswap, X Layer + Uniswap |
 
 ### Quick Decision Rules
 
@@ -277,6 +280,9 @@ Beyond the technical CLI workflows, use these references when the user needs hel
 | Risk management & portfolio protection | `references/risk-management.md` |
 | Market analysis & token evaluation | `references/market-analysis.md` |
 | Decision framework & checklists | `references/decision-framework.md` |
+| X Layer trading strategies (zero-gas, fast finality) | `references/xlayer-strategies.md` |
+| Agent automation playbook (auto-trading, monitoring) | `references/agent-automation.md` |
+| Uniswap integration guide (V3 LP, concentrated liquidity) | `references/uniswap-integration.md` |
 | Authentication & wallet reference | `references/authentication.md` |
 | Troubleshooting & edge cases | `references/troubleshooting.md` |
 | WebSocket real-time monitoring | `references/ws-monitoring.md` |
