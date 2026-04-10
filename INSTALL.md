@@ -43,7 +43,7 @@ command -v npx && echo "npx available"
 ### Option A: Using flins (recommended)
 
 ```bash
-npx flins add powxenv/okx-agent-skills
+npx flins add powxenv/okx-trade-skills
 ```
 
 This installs all three skills to the agent's skills directory.
@@ -51,13 +51,13 @@ This installs all three skills to the agent's skills directory.
 ### Option B: Using skills.sh
 
 ```bash
-npx skills add powxenv/okx-agent-skills
+npx skills add powxenv/okx-trade-skills
 ```
 
 ### Option C: Manual clone
 
 ```bash
-git clone https://github.com/powxenv/okx-agent-skills.git /tmp/okx-agent-skills
+git clone https://github.com/powxenv/okx-trade-skills.git /tmp/okx-agent-skills
 ```
 
 Then copy the selected skill folders into the agent's skills directory:

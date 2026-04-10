@@ -10,7 +10,7 @@ Paste this into your AI agent session:
 
 ```
 Install the OKX X Layer trading skills by following the guide here:
-https://raw.githubusercontent.com/powxenv/okx-agent-skills/main/INSTALL.md
+https://raw.githubusercontent.com/powxenv/okx-trade-skills/main/INSTALL.md
 ```
 
 Your agent will handle the rest.
@@ -20,7 +20,7 @@ Your agent will handle the rest.
 Fetch and follow the installation guide:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/powxenv/okx-agent-skills/main/INSTALL.md
+curl -fsSL https://raw.githubusercontent.com/powxenv/okx-trade-skills/main/INSTALL.md
 ```
 
 The guide walks you through asking the user which skills they want, installing via flins/skills.sh or manual clone, setting up OnchainOS, authenticating the wallet, and configuring the Uniswap API key if needed.
@@ -31,13 +31,13 @@ If you prefer to do it yourself:
 
 ```bash
 # Using skills.sh (https://skills.sh)
-npx skills add powxenv/okx-agent-skills
+npx skills add powxenv/okx-trade-skills
 
 # Using flins (https://flins.tech)
-npx flins add powxenv/okx-agent-skills
+npx flins add powxenv/okx-trade-skills
 
 # Or clone directly
-git clone https://github.com/powxenv/okx-agent-skills.git
+git clone https://github.com/powxenv/okx-trade-skills.git
 # Copy skill folders into your agent's skills directory
 # e.g. .agents/skills/, .claude/skills/, .cursor/skills/
 ```
