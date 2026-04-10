@@ -4,7 +4,30 @@ Three independent agent skills for on-chain trading, automation, and Uniswap int
 
 ## Install
 
-Pick one:
+### For Humans
+
+Paste this into your AI agent session:
+
+```
+Install the OKX X Layer trading skills by following the guide here:
+https://raw.githubusercontent.com/powxenv/okx-agent-skills/main/INSTALL.md
+```
+
+Your agent will handle the rest.
+
+### For LLM Agents
+
+Fetch and follow the installation guide:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/powxenv/okx-agent-skills/main/INSTALL.md
+```
+
+The guide walks you through asking the user which skills they want, installing via flins/skills.sh or manual clone, setting up OnchainOS, authenticating the wallet, and configuring the Uniswap API key if needed.
+
+### Manual Install
+
+If you prefer to do it yourself:
 
 ```bash
 # Using skills.sh (https://skills.sh)
@@ -12,14 +35,11 @@ npx skills add powxenv/okx-agent-skills
 
 # Using flins (https://flins.tech)
 npx flins add powxenv/okx-agent-skills
-```
 
-Or clone manually and place the skill folder in your agent's skills directory:
-
-```bash
+# Or clone directly
 git clone https://github.com/powxenv/okx-agent-skills.git
-# Copy the skill folder(s) you need into your agent's skills directory
-# e.g. .agents/skills/, .cursor/skills/, .claude/skills/
+# Copy skill folders into your agent's skills directory
+# e.g. .agents/skills/, .claude/skills/, .cursor/skills/
 ```
 
 Each skill is self-contained — no cross-skill dependencies. Install one, two, or all three.
