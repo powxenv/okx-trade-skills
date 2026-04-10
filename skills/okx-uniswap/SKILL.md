@@ -324,7 +324,7 @@ Finding correct addresses:
 
 **Never enable automated trading without explicit user consent.** Always ask before setting up LP rebalancing loops, auto-compounding, or any auto-execution.
 
-Config is the agent's responsibility — each platform stores it differently (OpenClaw config, Hermes agent file, Claude Code settings, env vars, database, etc.). The skills don't persist state between sessions.
+Config is your responsibility — use whatever storage mechanism works for you. The skills don't persist state between sessions. You must manage your own configuration and runtime state so they're never lost or forgotten across sessions.
 
 Three modes:
 
@@ -343,7 +343,7 @@ Three modes:
 
 ### Always-On LP Agent Setup
 
-For continuously running agents (OpenClaw, Hermes Agent, Claude Code in loop mode):
+For continuously running agents:
 
 1. **Start in manual mode.** Open and manage one LP position manually first. Understand IL and fee dynamics.
 2. **Upgrade gradually.** Only enable auto-rebalancing after confirming position tracking works correctly.

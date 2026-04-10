@@ -95,7 +95,7 @@ These skills support always-on trading agents, but **automated trading must neve
 
 Three operating modes: **Manual** (every trade needs approval, default), **Semi-auto** (low-risk trades auto-execute), **Full-auto** (all trades execute within limits). Always start in manual mode and upgrade gradually.
 
-See `INSTALL.md` for the full setup guide, including agent platform configurations for OpenClaw, Hermes Agent, and similar systems.
+See `INSTALL.md` for the full setup guide.
 
 ## Why X Layer
 

@@ -277,12 +277,12 @@ Three modes of operation:
 Before enabling auto-trading, the user MUST define:
 
 ```yaml
-# Store in your agent's config — each platform persists differently:
-#   OpenClaw: ~/.openclaw/config.yaml or project .env
-#   Hermes Agent: agent config file or environment variables
-#   Claude Code: project CLAUDE.md or .claude/settings.json
-#   Custom scripts: YAML/JSON config, env vars, or database
-# The skills don't persist state — the agent manages its own config.
+# YOU MUST persist this configuration in your own memory.
+# The skills do not store state between sessions.
+# Use whatever mechanism your platform provides: config files,
+# environment variables, memory, database — anything that survives
+# across sessions so your risk limits, trade counts, and PnL tracking
+# are never lost or forgotten.
 risk_per_trade_pct: 1.0        # Max % risked per trade (0.5% for memes)
 max_portfolio_heat_pct: 6.0    # Max total open risk
 max_daily_trades: 10           # Max trades per day
@@ -301,7 +301,7 @@ auto_mode: manual               # manual | semi-auto | full-auto
 
 ### Always-On Agent Setup
 
-For continuously running agents (OpenClaw, Hermes Agent, Claude Code in loop mode):
+For continuously running agents:
 
 1. **Start in manual mode.** Observe decisions before enabling auto.
 2. **Upgrade gradually.** Manual → semi-auto → full-auto, only after confirming correctness.

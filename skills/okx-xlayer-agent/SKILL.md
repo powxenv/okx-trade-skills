@@ -236,7 +236,7 @@ Three modes:
 
 ### Always-On Agent Setup
 
-For continuously running agents (OpenClaw, Hermes Agent, Claude Code in loop mode):
+For continuously running agents:
 
 1. **Start in manual mode.** Observe decisions for several sessions before enabling auto.
 2. **Upgrade gradually.** Manual → semi-auto → full-auto, only after confirming correctness.
@@ -249,7 +249,7 @@ Full agent automation guide: `references/agent-automation.md`
 
 ## Agent Configuration
 
-Before running in autonomous mode, define these parameters. Store them in your agent's own config — each platform persists differently (OpenClaw config, Hermes agent file, Claude Code settings, env vars, database, etc.). The skills don't persist state between sessions — the agent must manage its own config.
+Before running in autonomous mode, define these parameters. Store them in whatever way works for you — config file, environment variables, memory, database, anything that persists across sessions. The skills don't persist state — you must manage your own config so nothing is lost or forgotten.
 
 ```yaml
 risk_per_trade_pct: 1.0
