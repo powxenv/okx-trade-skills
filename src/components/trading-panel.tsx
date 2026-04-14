@@ -12,8 +12,13 @@ import tradingCliSwap from "../../skills/okx-trading/references/cli-reference-sw
 import tradingDecisionFramework from "../../skills/okx-trading/references/decision-framework.md?raw";
 import tradingKeywordGlossary from "../../skills/okx-trading/references/keyword-glossary.md?raw";
 import tradingMarketAnalysis from "../../skills/okx-trading/references/market-analysis.md?raw";
+import tradingNewUserGuide from "../../skills/okx-trading/references/new-user-guide.md?raw";
+import tradingRiskApprovalMonitoring from "../../skills/okx-trading/references/risk-approval-monitoring.md?raw";
+import tradingRiskDomainDetection from "../../skills/okx-trading/references/risk-domain-detection.md?raw";
 import tradingRiskFramework from "../../skills/okx-trading/references/risk-framework.md?raw";
 import tradingRiskManagement from "../../skills/okx-trading/references/risk-management.md?raw";
+import tradingRiskTokenDetection from "../../skills/okx-trading/references/risk-token-detection.md?raw";
+import tradingRiskTransactionDetection from "../../skills/okx-trading/references/risk-transaction-detection.md?raw";
 import tradingStrategies from "../../skills/okx-trading/references/trading-strategies.md?raw";
 import tradingTroubleshooting from "../../skills/okx-trading/references/troubleshooting.md?raw";
 import tradingUniswapIntegration from "../../skills/okx-trading/references/uniswap-integration.md?raw";
@@ -42,8 +47,13 @@ const files: FileEntry[] = [
   { id: "trading-decision-framework", filename: "references/decision-framework.md", content: tradingDecisionFramework },
   { id: "trading-keyword-glossary", filename: "references/keyword-glossary.md", content: tradingKeywordGlossary },
   { id: "trading-market-analysis", filename: "references/market-analysis.md", content: tradingMarketAnalysis },
+  { id: "trading-new-user-guide", filename: "references/new-user-guide.md", content: tradingNewUserGuide },
+  { id: "trading-risk-approval", filename: "references/risk-approval-monitoring.md", content: tradingRiskApprovalMonitoring },
+  { id: "trading-risk-domain", filename: "references/risk-domain-detection.md", content: tradingRiskDomainDetection },
   { id: "trading-risk-framework", filename: "references/risk-framework.md", content: tradingRiskFramework },
   { id: "trading-risk-management", filename: "references/risk-management.md", content: tradingRiskManagement },
+  { id: "trading-risk-token", filename: "references/risk-token-detection.md", content: tradingRiskTokenDetection },
+  { id: "trading-risk-tx", filename: "references/risk-transaction-detection.md", content: tradingRiskTransactionDetection },
   { id: "trading-strategies", filename: "references/trading-strategies.md", content: tradingStrategies },
   { id: "trading-troubleshooting", filename: "references/troubleshooting.md", content: tradingTroubleshooting },
   { id: "trading-uniswap-integration", filename: "references/uniswap-integration.md", content: tradingUniswapIntegration },
