@@ -3,6 +3,7 @@ import SolarDocumentsBoldDuotone from "~icons/solar/documents-bold-duotone";
 import TradingPanel from "./trading-panel";
 import UniswapPanel from "./uniswap-panel";
 import XlayerPanel from "./xlayer-panel";
+import EcosystemPanel from "./ecosystem-panel";
 
 export default function GuidesSection() {
   return (
@@ -24,18 +25,22 @@ export default function GuidesSection() {
 
         <div className="mt-8">
           <Tabs>
-            <Tabs.ListContainer className="w-full max-w-xl mx-auto">
+            <Tabs.ListContainer className="w-full max-w-lg mx-auto">
               <Tabs.List aria-label="Skill tabs">
                 <Tabs.Tab id="trading">
-                  OKX Trading
+                  Trading
                   <Tabs.Indicator />
                 </Tabs.Tab>
                 <Tabs.Tab id="uniswap">
-                  OKX Uniswap
+                  Uniswap
                   <Tabs.Indicator />
                 </Tabs.Tab>
                 <Tabs.Tab id="xlayer">
-                  OKX X Layer Agent
+                  X Layer
+                  <Tabs.Indicator />
+                </Tabs.Tab>
+                <Tabs.Tab id="ecosystem">
+                  Ecosystem
                   <Tabs.Indicator />
                 </Tabs.Tab>
               </Tabs.List>
@@ -51,6 +56,10 @@ export default function GuidesSection() {
 
             <Tabs.Panel id="xlayer">
               <XlayerPanel />
+            </Tabs.Panel>
+
+            <Tabs.Panel id="ecosystem">
+              <EcosystemPanel />
             </Tabs.Panel>
           </Tabs>
 

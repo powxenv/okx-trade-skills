@@ -1,15 +1,5 @@
-import { ScrollShadow, Tabs } from "@heroui/react";
-import SolarFileLineDuotone from "~icons/solar/file-line-duotone";
-import SolarCodeFileLineDuotone from "~icons/solar/code-file-line-duotone";
-import FilePanel from "./file-panel";
-
-interface FileEntry {
-  id: string;
-  filename: string;
-  content?: string;
-  isHeader?: boolean;
-  isCode?: boolean;
-}
+import type { FileEntry } from "./file-list-panel";
+import FileListPanel from "./file-list-panel";
 
 import uniswapSkill from "../../skills/okx-uniswap/SKILL.md?raw";
 import uniswapAgentPatterns from "../../skills/okx-uniswap/references/agent-uniswap-patterns.md?raw";
@@ -25,137 +15,25 @@ import uniswapNativeTokens from "../../skills/okx-uniswap/_shared/native-tokens.
 import uniswapPreflight from "../../skills/okx-uniswap/_shared/preflight.md?raw";
 import uniswapOpenai from "../../skills/okx-uniswap/agents/openai.yaml?raw";
 
-const files = [
+const files: FileEntry[] = [
   { id: "uniswap-skill", filename: "SKILL.md", content: uniswapSkill },
-  { id: "uniswap-ref-header", filename: "references/", isHeader: true },
-  {
-    id: "uniswap-patterns",
-    filename: "references/agent-uniswap-patterns.md",
-    content: uniswapAgentPatterns,
-  },
-  {
-    id: "uniswap-keyword-glossary",
-    filename: "references/keyword-glossary.md",
-    content: uniswapKeywordGlossary,
-  },
-  {
-    id: "uniswap-liquidity",
-    filename: "references/liquidity-management.md",
-    content: uniswapLiquidityMgmt,
-  },
-  {
-    id: "uniswap-risk-mgmt",
-    filename: "references/risk-management.md",
-    content: uniswapRiskManagement,
-  },
-  {
-    id: "uniswap-strategies",
-    filename: "references/trading-strategies.md",
-    content: uniswapStrategies,
-  },
-  {
-    id: "uniswap-trading-api",
-    filename: "references/trading-api.md",
-    content: uniswapTradingApi,
-  },
-  {
-    id: "uniswap-xlayer",
-    filename: "references/xlayer-strategies.md",
-    content: uniswapXlayerStrategies,
-  },
-  {
-    id: "uniswap-payments",
-    filename: "references/x402-payments.md",
-    content: uniswapX402Payments,
-  },
-  { id: "uniswap-shared-header", filename: "_shared/", isHeader: true },
-  {
-    id: "uniswap-chain-support",
-    filename: "_shared/chain-support.md",
-    content: uniswapChainSupport,
-  },
-  {
-    id: "uniswap-native-tokens",
-    filename: "_shared/native-tokens.md",
-    content: uniswapNativeTokens,
-  },
-  {
-    id: "uniswap-preflight",
-    filename: "_shared/preflight.md",
-    content: uniswapPreflight,
-  },
-  { id: "uniswap-agents-header", filename: "agents/", isHeader: true },
-  {
-    id: "uniswap-openai",
-    filename: "agents/openai.yaml",
-    content: uniswapOpenai,
-    isCode: true,
-  },
-] satisfies FileEntry[];
+  { id: "uniswap-ref-header", filename: "references/", isHeader: true, content: "" },
+  { id: "uniswap-patterns", filename: "references/agent-uniswap-patterns.md", content: uniswapAgentPatterns },
+  { id: "uniswap-keyword-glossary", filename: "references/keyword-glossary.md", content: uniswapKeywordGlossary },
+  { id: "uniswap-liquidity", filename: "references/liquidity-management.md", content: uniswapLiquidityMgmt },
+  { id: "uniswap-risk-mgmt", filename: "references/risk-management.md", content: uniswapRiskManagement },
+  { id: "uniswap-strategies", filename: "references/trading-strategies.md", content: uniswapStrategies },
+  { id: "uniswap-trading-api", filename: "references/trading-api.md", content: uniswapTradingApi },
+  { id: "uniswap-xlayer", filename: "references/xlayer-strategies.md", content: uniswapXlayerStrategies },
+  { id: "uniswap-payments", filename: "references/x402-payments.md", content: uniswapX402Payments },
+  { id: "uniswap-shared-header", filename: "_shared/", isHeader: true, content: "" },
+  { id: "uniswap-chain-support", filename: "_shared/chain-support.md", content: uniswapChainSupport },
+  { id: "uniswap-native-tokens", filename: "_shared/native-tokens.md", content: uniswapNativeTokens },
+  { id: "uniswap-preflight", filename: "_shared/preflight.md", content: uniswapPreflight },
+  { id: "uniswap-agents-header", filename: "agents/", isHeader: true, content: "" },
+  { id: "uniswap-openai", filename: "agents/openai.yaml", content: uniswapOpenai, isCode: true },
+];
 
 export default function UniswapPanel() {
-  return (
-    <>
-      <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 md:hidden">
-        {files
-          .filter((f) => !f.isHeader)
-          .map((file) => (
-            <div key={file.id} className="max-w-full shrink-0 snap-start">
-              <FilePanel filename={file.filename} content={file.content} />
-            </div>
-          ))}
-      </div>
-
-      <div className="hidden md:block">
-        <aside>
-          <Tabs orientation="vertical">
-            <ScrollShadow className="max-h-165 max-w-75 w-full shrink-0">
-              <Tabs.ListContainer>
-                <Tabs.List
-                  aria-label="Uniswap skill files"
-                  className="*:justify-start bg-transparent *:text-start w-full"
-                >
-                  {files.map((file) =>
-                    file.isHeader ? (
-                      <Tabs.Tab
-                        key={file.id}
-                        id={file.id}
-                        isDisabled
-                        className="opacity-100 text-zinc-500"
-                      >
-                        {file.filename}
-                        <Tabs.Indicator className="bg-muted/6 shadow-none" />
-                      </Tabs.Tab>
-                    ) : (
-                      <Tabs.Tab key={file.id} id={file.id}>
-                        {file.isCode ? (
-                          <SolarCodeFileLineDuotone className="size-4 mr-1" />
-                        ) : (
-                          <SolarFileLineDuotone className="size-4 mr-1" />
-                        )}
-                        {file.filename.split("/").pop()}
-                        <Tabs.Indicator className="bg-muted/6 shadow-none" />
-                      </Tabs.Tab>
-                    ),
-                  )}
-                </Tabs.List>
-              </Tabs.ListContainer>
-            </ScrollShadow>
-
-            {files.map(
-              (file) =>
-                !file.isHeader && (
-                  <Tabs.Panel key={file.id} className="px-4" id={file.id}>
-                    <FilePanel
-                      filename={file.filename}
-                      content={file.content}
-                    />
-                  </Tabs.Panel>
-                ),
-            )}
-          </Tabs>
-        </aside>
-      </div>
-    </>
-  );
+  return <FileListPanel files={files} ariaLabel="Uniswap skill files" />;
 }
