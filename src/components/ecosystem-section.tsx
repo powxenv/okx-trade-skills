@@ -73,7 +73,7 @@ function SkillCard({
 
 export default function EcosystemSection() {
   return (
-    <section className="py-16 md:py-28">
+    <section id="ecosystem" className="py-16 md:py-28">
       <div className="inner">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
           <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm">

@@ -7,9 +7,10 @@ export default function Header() {
           Trade Skills
         </a>
         <nav className='hidden sm:flex items-center gap-6 text-sm text-zinc-600'>
+          <a href='#why'>Why</a>
           <a href='#guides'>Guides</a>
+          <a href='#ecosystem'>Ecosystem</a>
           <a href='#install'>Install</a>
-          <a href='https://github.com/powxenv/okx-trade-skills' target='_blank' rel='noopener noreferrer'>GitHub</a>
         </nav>
       </div>
     </header>

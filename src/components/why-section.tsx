@@ -32,7 +32,7 @@ const stats = [
 
 export default function WhySection() {
   return (
-    <section className="py-16 md:py-28">
+    <section id="why" className="py-16 md:py-28">
       <div className="inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div>
