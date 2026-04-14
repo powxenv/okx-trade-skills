@@ -8,9 +8,11 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.9",
     "@astrojs/react": "^5.0.3",
     "@heroui/react": "^3.0.2",
     "@heroui/styles": "^3.0.2",
@@ -19,11 +21,15 @@
     "astro": "^6.1.6",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "wrangler": "^4.82.2"
   },
   "devDependencies": {
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "unplugin-icons": "^23.0.1"
+  },
+  "overrides": {
+    "vite": "^7"
   }
 }
