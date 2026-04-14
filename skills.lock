@@ -1,0 +1,112 @@
+{
+  "skills": {
+    "skill:adapt": {
+      "name": "adapt",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:animate": {
+      "name": "animate",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:audit": {
+      "name": "audit",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:bolder": {
+      "name": "bolder",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:clarify": {
+      "name": "clarify",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:colorize": {
+      "name": "colorize",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:critique": {
+      "name": "critique",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:delight": {
+      "name": "delight",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:distill": {
+      "name": "distill",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:harden": {
+      "name": "harden",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:impeccable": {
+      "name": "impeccable",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:layout": {
+      "name": "layout",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:optimize": {
+      "name": "optimize",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:overdrive": {
+      "name": "overdrive",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:polish": {
+      "name": "polish",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:quieter": {
+      "name": "quieter",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:shape": {
+      "name": "shape",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    },
+    "skill:typeset": {
+      "name": "typeset",
+      "url": "https://github.com/pbakaus/impeccable.git",
+      "branch": "main",
+      "commit": "00d485659af82982aef0328d0419c49a2716d123"
+    }
+  }
+}
