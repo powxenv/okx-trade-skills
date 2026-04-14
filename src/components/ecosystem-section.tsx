@@ -81,11 +81,12 @@ export default function EcosystemSection() {
             {ecosystemSkills.length} Skills in the Ecosystem
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
-            More skills to explore
+            More skills, more chains, more coverage
           </h1>
           <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
-            Discover agent skills from across the onchain ecosystem — from OKX
-            OnchainOS to Uniswap AI. Each skill is ready to install and use.
+            The ecosystem keeps growing. Grab skills from OKX OnchainOS,
+            Uniswap AI, and beyond. One command to install, ready to use right
+            away.
           </p>
         </div>
 
