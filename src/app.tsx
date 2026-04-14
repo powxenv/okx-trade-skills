@@ -9,7 +9,7 @@ import { Button, Tabs } from "@heroui/react";
 function App() {
   return (
     <>
-      <main className='min-h-lvh flex items-center'>
+      <main className='min-h-lvh flex items-center py-18'>
         <div className="inner">
           <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
             <div className='border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg'>
