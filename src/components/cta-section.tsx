@@ -3,6 +3,7 @@ import SolarShieldKeyholeBoldDuotone from '~icons/solar/shield-keyhole-bold-duot
 import SolarLockKeyholeBoldDuotone from '~icons/solar/lock-keyhole-bold-duotone'
 import SolarUsersGroupTwoRoundedBoldDuotone from '~icons/solar/users-group-two-rounded-bold-duotone'
 import SolarRefreshCircleBoldDuotone from '~icons/solar/refresh-circle-bold-duotone'
+import SolarRocket2BoldDuotone from '~icons/solar/rocket-2-bold-duotone'
 import SolarCopyLineDuotone from '~icons/solar/copy-line-duotone'
 
 function InstallTabs() {
@@ -121,11 +122,14 @@ function TrustCards() {
 
 export default function CtaSection() {
   return (
-    <section className='py-28'>
+    <section id='install' className='py-28'>
       <div className="inner">
         <div className="grid grid-cols-2 gap-8">
           <div>
-            <h1 className="text-6xl mb-6">Start trading onchain today</h1>
+            <div className='border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg w-fit'>
+              <SolarRocket2BoldDuotone className='text-zinc-500' />Get started in seconds
+            </div>
+            <h1 className="text-6xl mb-6 mt-4">Start trading onchain today</h1>
             <p className="max-w-xl text-xl text-zinc-600">Copy the install command below and get started with autonomous onchain trading in seconds.</p>
 
             <InstallTabs />

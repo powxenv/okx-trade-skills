@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "@heroui/styles";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Satoshi Font — https://www.fontshare.com/fonts/satoshi */
 /* Designed by Deni Anggara © 2026 Indian Type Foundry */
 
