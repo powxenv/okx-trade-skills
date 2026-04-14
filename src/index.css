@@ -7,8 +7,8 @@
 @font-face {
   font-family: 'Satoshi';
   src: url('./assets/fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
-       url('./assets/fonts/satoshi/Satoshi-Variable.woff') format('woff'),
-       url('./assets/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
+    url('./assets/fonts/satoshi/Satoshi-Variable.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -17,8 +17,8 @@
 @font-face {
   font-family: 'Satoshi';
   src: url('./assets/fonts/satoshi/Satoshi-VariableItalic.woff2') format('woff2'),
-       url('./assets/fonts/satoshi/Satoshi-VariableItalic.woff') format('woff'),
-       url('./assets/fonts/satoshi/Satoshi-VariableItalic.ttf') format('truetype');
+    url('./assets/fonts/satoshi/Satoshi-VariableItalic.woff') format('woff'),
+    url('./assets/fonts/satoshi/Satoshi-VariableItalic.ttf') format('truetype');
   font-weight: 300 900;
   font-display: swap;
   font-style: italic;
@@ -26,4 +26,23 @@
 
 @theme {
   --font-sans: "Satoshi", sans-serif;
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply -tracking-wider font-medium;
+  }
+}
+
+
+@layer components {
+  .inner {
+    @apply mx-auto w-9/10 max-w-272;
+  }
 }
