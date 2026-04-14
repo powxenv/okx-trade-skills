@@ -1,31 +1,30 @@
 import { Button, Tabs } from "@heroui/react";
-import SolarBag4BoldDuotone from '~icons/solar/bag-4-bold-duotone'
-import SolarWadOfMoneyBoldDuotone from '~icons/solar/wad-of-money-bold-duotone'
-import SolarPlanet2BoldDuotone from '~icons/solar/planet-2-bold-duotone'
-import SolarChartBoldDuotone from '~icons/solar/chart-bold-duotone'
-import SolarArchiveDownMinimlisticBoldDuotone from '~icons/solar/archive-down-minimlistic-bold-duotone'
+import SolarShieldKeyholeBoldDuotone from '~icons/solar/shield-keyhole-bold-duotone'
+import SolarLockKeyholeBoldDuotone from '~icons/solar/lock-keyhole-bold-duotone'
+import SolarUsersGroupTwoRoundedBoldDuotone from '~icons/solar/users-group-two-rounded-bold-duotone'
+import SolarRefreshCircleBoldDuotone from '~icons/solar/refresh-circle-bold-duotone'
 import SolarCopyLineDuotone from '~icons/solar/copy-line-duotone'
 
 function InstallTabs() {
   return (
-    <Tabs className="w-full max-w-md">
+    <Tabs className="w-full mt-6">
       <Tabs.ListContainer>
         <Tabs.List aria-label="Options">
-          <Tabs.Tab id="overview">
+          <Tabs.Tab id="prompt">
             Copy Prompt
             <Tabs.Indicator />
           </Tabs.Tab>
-          <Tabs.Tab id="analytics">
+          <Tabs.Tab id="flins">
             Use Flins
             <Tabs.Indicator />
           </Tabs.Tab>
-          <Tabs.Tab id="reports">
+          <Tabs.Tab id="skills">
             Use skills.sh
             <Tabs.Indicator />
           </Tabs.Tab>
         </Tabs.List>
       </Tabs.ListContainer>
-      <Tabs.Panel id="overview" className='h-40'>
+      <Tabs.Panel id="prompt" className='h-40'>
         <div className='border rounded-2xl p-1'>
           <div className='bg-zinc-100 rounded-xl'>
             <div className='pr-2 pl-4 py-1 items-center flex justify-between'>
@@ -40,7 +39,7 @@ function InstallTabs() {
           </div>
         </div>
       </Tabs.Panel>
-      <Tabs.Panel id="analytics" className='h-40'>
+      <Tabs.Panel id="flins" className='h-40'>
         <div className='border rounded-2xl p-1'>
           <div className='bg-zinc-100 rounded-xl'>
             <div className='pr-2 pl-4 py-1 items-center flex justify-between'>
@@ -55,7 +54,7 @@ function InstallTabs() {
           </div>
         </div>
       </Tabs.Panel>
-      <Tabs.Panel id="reports" className='h-40'>
+      <Tabs.Panel id="skills" className='h-40'>
         <div className='border rounded-2xl p-1'>
           <div className='bg-zinc-100 rounded-xl'>
             <div className='pr-2 pl-4 py-1 items-center flex justify-between'>
@@ -74,70 +73,66 @@ function InstallTabs() {
   )
 }
 
-function FeatureCards() {
+function TrustCards() {
   return (
-    <div className="grid grid-cols-4 gap-4 mt-8">
-      <div className='rotate-2 -translate-y-20'>
+    <div className="grid grid-cols-2 gap-4">
+      <div className='rotate-1'>
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className='size-10 border flex justify-center items-center rounded-lg'>
-            <SolarWadOfMoneyBoldDuotone className='text-zinc-500' />
+            <SolarShieldKeyholeBoldDuotone className='text-zinc-500' />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Execute swaps with safety built in</h3>
-          <p>Get price quotes across 500+ DEXes, run honeypot scans before every trade, and execute with slippage protection and MEV defense.</p>
+          <h3 className="text-lg mt-1 mb-2">Non-custodial by design</h3>
+          <p>Your keys never leave your wallet. Every transaction is signed locally and every skill runs on your machine. No middlemen, no server-side access.</p>
         </div>
       </div>
 
-      <div className='-rotate-10'>
+      <div className='-rotate-2'>
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className='size-10 border flex justify-center items-center rounded-lg'>
-            <SolarBag4BoldDuotone className='text-zinc-500' />
+            <SolarLockKeyholeBoldDuotone className='text-zinc-500' />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Run autonomous trading agents</h3>
-          <p>Deploy self-managing bots that follow smart money signals, rebalance portfolios, and compound DeFi yields. Manual, semi-auto, or full-auto modes.</p>
+          <h3 className="text-lg mt-1 mb-2">Built-in safety rails</h3>
+          <p>Honeypot detection, slippage limits, and risk scoring run before every trade. Autonomous agents follow strict guardrails you define and control.</p>
         </div>
       </div>
 
-      <div className='rotate-6'>
+      <div className='rotate-2'>
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className='size-10 border flex justify-center items-center rounded-lg'>
-            <SolarPlanet2BoldDuotone className='text-zinc-500' />
+            <SolarUsersGroupTwoRoundedBoldDuotone className='text-zinc-500' />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Stake, lend, and provide liquidity</h3>
-          <p>Access DeFi protocols across chains. Deposit into yield farms, manage V3 LP positions, and auto-compound rewards with gas-optimized rebalancing.</p>
+          <h3 className="text-lg mt-1 mb-2">Battle-tested by traders</h3>
+          <p>Installed and relied on by real onchain traders. Every workflow and strategy is derived from live market experience, not theory.</p>
         </div>
       </div>
 
-      <div className='-rotate-4 -translate-y-10'>
+      <div className='-rotate-1'>
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className='size-10 border flex justify-center items-center rounded-lg'>
-            <SolarChartBoldDuotone className='text-zinc-500' />
+            <SolarRefreshCircleBoldDuotone className='text-zinc-500' />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Research before you trade</h3>
-          <p>Analyze token metrics, track whale and KOL wallets, monitor trending memes, and get real-time PnL analytics. Data-driven decisions only.</p>
+          <h3 className="text-lg mt-1 mb-2">Always up to date</h3>
+          <p>Skills update with the latest chain support, protocol changes, and market data. Run one command to pull the latest and stay current.</p>
         </div>
       </div>
     </div>
   )
 }
 
-export default function HeroSection() {
+export default function CtaSection() {
   return (
-    <main className='min-h-lvh flex items-center py-18'>
+    <section className='py-28'>
       <div className="inner">
-        <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
-          <div className='border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg'>
-            <SolarArchiveDownMinimlisticBoldDuotone className='text-zinc-500' />Installed 100+ times
+        <div className="grid grid-cols-2 gap-8">
+          <div>
+            <h1 className="text-6xl mb-6">Start trading onchain today</h1>
+            <p className="max-w-xl text-xl text-zinc-600">Copy the install command below and get started with autonomous onchain trading in seconds.</p>
+
+            <InstallTabs />
           </div>
-          <h1 className="text-6xl mb-6 mt-4">Trade onchain with AI agents that actually work</h1>
-          <p className="max-w-xl text-xl text-zinc-600">A skill library for autonomous trading. Research tokens, scan for honeypots, execute swaps, track smart money, and run DeFi strategies across EVM chains and Solana.</p>
+          <TrustCards />
         </div>
-
-        <div className='flex justify-center mt-8'>
-          <InstallTabs />
-        </div>
-
-        <FeatureCards />
       </div>
-    </main>
+    </section>
   )
 }

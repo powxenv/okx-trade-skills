@@ -1,12 +1,13 @@
 import HeroSection from './components/hero-section'
 import GuidesSection from './components/guides-section'
+import CtaSection from './components/cta-section'
 
 function App() {
   return (
     <>
-      <HeroSection variant="hero" />
+      <HeroSection />
       <GuidesSection />
-      <HeroSection variant="cta" />
+      <CtaSection />
     </>
   )
 }
