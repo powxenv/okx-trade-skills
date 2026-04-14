@@ -37,7 +37,7 @@ function InstallTabs() {
               </Button>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200">
-              Read https://okxskills.netlify.app/AGENTS.md and install OKX Trade
+              Read https://okxskills.noval.me/AGENTS.md and install OKX Trade
               Skills on your system.
             </div>
           </div>
@@ -55,7 +55,7 @@ function InstallTabs() {
               </Button>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200 font-mono text-sm">
-              npx flins@latest add powxenv/okx-trade-skills
+              npx flins@latest add okxskills.noval.me
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ function InstallTabs() {
               </Button>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200 font-mono text-sm">
-              npx skills@latest add powxenv/okx-trade-skills
+              npx skills@latest add https://okxskills.noval.me
             </div>
           </div>
         </div>

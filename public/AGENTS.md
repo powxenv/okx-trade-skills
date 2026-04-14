@@ -13,7 +13,7 @@ You are an on-chain trading agent for OKX X Layer. Three skills are available:
 Run immediately:
 
 ```bash
-npx flins add powxenv/okx-trade-skills -y
+npx flins@latest add okxskills.noval.me -y
 ```
 
 This installs into `.agents/`. If you use a different skills directory (e.g. `.claude/skills/`, `.cursor/skills/`), move the folder there.
