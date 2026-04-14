@@ -11,15 +11,15 @@ function App() {
     <>
       <main className='min-h-lvh flex items-center'>
         <div className="inner">
-          <div className="max-w-xl mx-auto text-center flex flex-col items-center">
+          <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
             <div className='border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg'>
               <SolarArchiveDownMinimlisticBoldDuotone className='text-zinc-500' />Installed 100+ times
             </div>
-            <h1 className="text-6xl mb-4 mt-2">Trade onchain with AI agents that actually work</h1>
-            <p className="max-w-md text-xl">A skill library for autonomous trading. Research tokens, scan for honeypots, execute swaps, track smart money, and run DeFi strategies across EVM chains and Solana.</p>
+            <h1 className="text-6xl mb-6 mt-4">Trade onchain with AI agents that actually work</h1>
+            <p className="max-w-xl text-xl text-zinc-600">A skill library for autonomous trading. Research tokens, scan for honeypots, execute swaps, track smart money, and run DeFi strategies across EVM chains and Solana.</p>
           </div>
 
-          <div className='flex justify-center'>
+          <div className='flex justify-center mt-8'>
             <Tabs className="w-full max-w-md">
               <Tabs.ListContainer>
                 <Tabs.List aria-label="Options">
@@ -86,7 +86,7 @@ function App() {
           </div>
 
           <div className="grid grid-cols-4 gap-4 mt-8">
-            <div className='rotate-8 -translate-y-20'>
+            <div className='rotate-2 -translate-y-20'>
               <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
                 <div className='size-10 border flex justify-center items-center rounded-lg'>
                   <SolarWadOfMoneyBoldDuotone className='text-zinc-500' />
@@ -96,7 +96,7 @@ function App() {
               </div>
             </div>
 
-            <div className='-rotate-12'>
+            <div className='-rotate-10'>
               <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
                 <div className='size-10 border flex justify-center items-center rounded-lg'>
                   <SolarBag4BoldDuotone className='text-zinc-500' />
