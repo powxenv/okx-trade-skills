@@ -1,43 +1,92 @@
-# Astro Starter Kit: Minimal
+# OKX Trade Skills
 
-```sh
-bun create astro@latest -- --template minimal
+A collection of 7 agent skills for on-chain trading on OKX X Layer, served via a static Astro site with a well-known discovery endpoint. Built for the X Layer Build X Hackathon (Skills Arena).
+
+## Skills
+
+| Skill | Purpose |
+|---|---|
+| `okx-trading` | Research, security, swaps, DeFi yield, portfolio, wallets |
+| `okx-xlayer-agent` | Autonomous agent loops on X Layer: DCA, auto-compound, risk gates |
+| `okx-uniswap` | Uniswap V3 LP management, Trading API swaps, x402 payments |
+| `okx-uniswap-dev` | Uniswap v4 hook development, CCA deployment, SDK integration |
+| `okx-portfolio-guardian` | Risk monitoring, stop-loss automation, approval tracking, alerts |
+| `okx-meme-intelligence` | Meme token analysis, dev reputation, sniper detection, safety scoring |
+| `okx-ecosystem-discovery` | Browse, search, and install skills from the ecosystem |
+
+## Quick Setup
+
+**Option 1 — Copy to your AI agent (works with any agent):**
+
+```
+Read https://okxskills.noval.me/AGENTS.md and install OKX Trade Skills on your system.
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+**Option 2 — Use Flins (terminal):**
 
-## 🚀 Project Structure
+```bash
+npx flins@latest add okxskills.noval.me
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+**Option 3 — Use skills.sh (terminal):**
 
-```text
+```bash
+npx skills@latest add https://okxskills.noval.me
+```
+
+## Project Structure
+
+```
 /
 ├── public/
+│   ├── .well-known/agent-skills/   # Skill archives + index.json
+│   ├── AGENTS.md                   # Agent-facing readme
+│   └── okx.svg
+├── skills/                         # Source for each skill
+│   ├── okx-trading/
+│   │   ├── SKILL.md
+│   │   ├── agents/openai.yaml
+│   │   ├── _shared/                # Shared preflight, chain support, native tokens
+│   │   └── references/             # Domain-specific reference docs
+│   ├── okx-xlayer-agent/
+│   ├── okx-uniswap/
+│   ├── okx-uniswap-dev/
+│   ├── okx-portfolio-guardian/
+│   ├── okx-meme-intelligence/
+│   └── okx-ecosystem-discovery/
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/                 # React UI components (HeroUI + Tailwind)
+│   ├── data/ecosystem-skills.ts
+│   ├── styles/global.css
+│   ├── assets/fonts/satoshi/
+│   └── pages/index.astro
+├── scripts/
+│   └── build-discovery.ts          # Generates skill archives + index.json
+├── astro.config.mjs
+├── wrangler.jsonc                  # Cloudflare Pages deployment
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Tech Stack
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Astro** with React integration
+- **Tailwind CSS v4** + **HeroUI v3**
+- **Cloudflare Pages** (via `@astrojs/cloudflare`)
+- **unplugin-icons** for icon imports
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Commands
 
-## 🧞 Commands
+| Command | Action |
+|:--|:--|
+| `bun install` | Install dependencies |
+| `bun dev` | Start dev server at `localhost:4321` |
+| `bun run build` | Generate skill archives + build site to `./dist/` |
+| `bun preview` | Preview production build locally |
 
-All commands are run from the root of the project, from a terminal:
+## Deployment
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+The prebuild script (`scripts/build-discovery.ts`) packages each `skills/` directory into a `.tar.gz` archive under `public/.well-known/agent-skills/` and generates `index.json`. Deploy to Cloudflare Pages via `bun run build`.
 
-## 👀 Want to learn more?
+## License
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+MIT
