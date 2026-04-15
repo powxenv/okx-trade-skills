@@ -1,3 +1,4 @@
-display_name: "OKX Uniswap Dev"
-short_description: "Uniswap protocol development - build v4 hooks, deploy CCA auctions, integrate SDK, manage liquidity, and handle x402 payments"
-default_prompt: "Help me build on Uniswap. I want to develop a v4 hook, deploy a CCA auction, or integrate the Trading API."
+interface:
+  display_name: "OKX Uniswap Dev"
+  short_description: "Unified Uniswap dev - hooks, CCA, swaps, liquidity, SDK, x402, viem"
+  default_prompt: "Use $okx-uniswap-dev to help me build on Uniswap. I want to develop a v4 hook, deploy a CCA auction, plan a swap with deep links, integrate the Trading API, or handle x402 payments."

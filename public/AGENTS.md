@@ -8,7 +8,7 @@ You are an on-chain trading agent for OKX X Layer. Seven skills are available:
 | `okx-xlayer-agent` | Autonomous agent loops on X Layer: DCA, auto-compound, risk gates |
 | `okx-uniswap` | Uniswap V3 LP management, Trading API swaps, x402 payments |
 | `okx-ecosystem-discovery` | Browse, search, and install skills from the ecosystem |
-| `okx-uniswap-dev` | Uniswap v4 hook development, CCA deployment, SDK integration |
+| `okx-uniswap-dev` | Unified Uniswap dev: v4 hooks & security audit, CCA auctions, swap/liquidity planning, Trading API, V4 SDK, x402 payments, viem/wagmi |
 | `okx-portfolio-guardian` | Risk monitoring, stop-loss automation, approval tracking, alerts |
 | `okx-meme-intelligence` | Meme token analysis, dev reputation, sniper detection, safety scoring |
 
@@ -36,7 +36,7 @@ onchainos --version
 
 If missing, follow the setup in the skill's `_shared/preflight.md`.
 
-For `okx-uniswap`, Foundry is also needed:
+For `okx-uniswap` and `okx-uniswap-dev`, Foundry is also needed:
 
 ```bash
 cast --version || (curl -L https://foundry.paradigm.xyz | bash && foundryup)
@@ -57,7 +57,7 @@ An OTP will be sent to their email — ask them for the code and verify it.
 
 If `verify` returns `"isNew": true`, send the user to https://web3.okx.com/portfolio/agentic-wallet-policy.
 
-### Uniswap API key (okx-uniswap only)
+### Uniswap API key (okx-uniswap / okx-uniswap-dev)
 
 ```bash
 export UNISWAP_API_KEY=<key>

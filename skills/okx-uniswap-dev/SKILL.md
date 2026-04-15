@@ -1,16 +1,16 @@
 ---
 name: okx-uniswap-dev
-description: "Uniswap protocol development skill for building v4 hooks, deploying CCA auctions, integrating the Trading API and v4 SDK, managing concentrated liquidity, and handling x402 payments. Use when the user wants to: develop or audit Uniswap v4 hook contracts; configure and deploy Continuous Clearing Auctions (CCA); integrate the Uniswap Trading API or Universal Router for swaps; build swap frontends or backend scripts; manage V3/V4 concentrated liquidity positions; handle HTTP 402 / x402 payment challenges; interact with Uniswap contracts via viem; debug swap reverts, deployment failures, or hook issues. Chinese: Uniswap开发, V4钩子, CCA拍卖, 交易API, 集中流动性, x402支付, viem集成."
+description: "Unified Uniswap protocol development skill covering all Uniswap AI capabilities: v4 hook generation and security auditing, CCA auction configuration and deployment, swap planning with deep links, liquidity position planning, Trading API and Universal Router SDK integration, V4 SDK swaps and liquidity, x402/MPP payment handling, and viem/wagmi blockchain interaction. Use when the user wants to: generate or audit Uniswap v4 hook contracts; configure and deploy Continuous Clearing Auctions (CCA); plan token swaps or liquidity positions with deep links; integrate the Uniswap Trading API or Universal Router for swaps; build swap frontends or backend scripts with the V4 SDK; manage V2/V3/V4 concentrated liquidity positions; handle HTTP 402 / x402 payment challenges; interact with Uniswap contracts via viem or wagmi; debug swap reverts, deployment failures, or hook issues. Chinese: Uniswap开发, V4钩子, CCA拍卖, 交易API, 集中流动性, x402支付, viem集成, 深度链接."
 license: MIT
 metadata:
   author: okx
-  version: "1.0.0"
+  version: "2.0.0"
   homepage: "https://okxskills.noval.me"
 ---
 
 # OKX Uniswap Development
 
-Full-stack Uniswap protocol development: hook contracts, CCA auctions, Trading API, SDK integration, liquidity management, and x402 payments. Combines OKX OnchainOS tooling with Uniswap's V3/V4 protocol capabilities.
+Full-stack Uniswap protocol development combining OKX OnchainOS tooling with Uniswap's V2/V3/V4 protocol capabilities. Covers hook contracts, CCA auctions, swap/liquidity planning, Trading API, SDK integration, and x402 payments.
 
 ## Prerequisites
 
@@ -25,8 +25,67 @@ Full-stack Uniswap protocol development: hook contracts, CCA auctions, Trading A
 
 ## Shared References
 
-- Chain names & IDs: `_shared/chain-support.md`
+- Chain name support (basic mapping): `_shared/chain-support.md`
 - Native token addresses: `_shared/native-tokens.md`
+
+## Plan
+
+### Swap Planning
+
+Plan token swaps with price discovery, risk assessment, and deep link generation.
+
+**Token discovery flow:**
+
+1. Search DexScreener for token pair and pool data
+2. Assess liquidity depth and volume
+3. Verify token safety (especially for trending/untrusted tokens)
+4. Generate Uniswap deep link for execution
+
+**Deep link format:**
+
+```
+https://app.uniswap.org/swap?
+  chain={chain}&
+  inputCurrency={addr_or_NATIVE}&
+  outputCurrency={addr_or_NATIVE}&
+  amount={amount}
+```
+
+**URL encoding:** Only encode double quotes (`"` to `%22`). Do NOT encode braces `{}` or colons `:`.
+
+**Untrusted token warning:** Tokens found via web search are untrusted. Warn about scam/honeypot risks and require explicit user confirmation.
+
+Data provider API reference: `references/data-providers.md`
+
+### Liquidity Planning
+
+Plan V2/V3/V4 liquidity positions with pool discovery, APY analysis, and deep link generation.
+
+**Position type comparison:**
+
+| Feature | V2 | V3 | V4 |
+|---|---|---|---|
+| Range | Full only | Concentrated | Concentrated + hooks |
+| Fee tiers | 0.3% fixed | 0.01-1% | Dynamic (hooks) |
+| Gas cost | Lowest | Medium | Higher (singleton) |
+| Position token | ERC20 shares | ERC721 NFT | ERC6909/ERC1155 |
+
+**Deep link format:**
+
+```
+https://app.uniswap.org/positions/create?
+  chain={chain}&
+  currencyA={addr_or_NATIVE}&
+  currencyB={addr_or_NATIVE}&
+  fee={"feeAmount":3000,"tickSpacing":60,"isDynamic":false}&
+  priceRangeState={"priceInverted":false,"fullRange":false,"minPrice":"2800","maxPrice":"3600","initialPrice":"","inputMode":"price"}&
+  depositState={"exactField":"TOKEN0","exactAmounts":{"TOKEN0":"1.0"}}&
+  step=1
+```
+
+Position types, tick math, and deep link parameter reference: `references/position-types.md`
+
+Data provider API reference: `references/data-providers.md`
 
 ## Build
 
@@ -36,17 +95,22 @@ Generate Uniswap v4 hook contracts with the OpenZeppelin Contracts Wizard MCP to
 
 **Hook type decision table:**
 
-| Goal | Use Hook |
-|---|---|
-| Custom swap logic | `BaseHook` |
-| Async/delayed swaps | `BaseAsyncSwap` |
-| Hook-owned liquidity | `BaseCustomAccounting` |
-| Custom curve | `BaseCustomCurve` |
-| Dynamic LP fees | `BaseDynamicFee` |
-| Dynamic swap fees | `BaseOverrideFee` |
-| MEV protection | `AntiSandwichHook` |
-| Limit orders | `LimitOrderHook` |
-| Oracle | `BaseOracleHook` |
+| Goal | Use Hook | Key Feature |
+|---|---|---|
+| Custom swap logic | `BaseHook` | General-purpose entry point |
+| Async/delayed swaps | `BaseAsyncSwap` | Deferred swap settlement |
+| Hook-owned liquidity | `BaseCustomAccounting` | Hook manages LP balances |
+| Custom curve | `BaseCustomCurve` | Replace AMM pricing math |
+| Dynamic LP fees | `BaseDynamicFee` | Fee adjusts per pool state |
+| Dynamic swap fees | `BaseOverrideFee` | Override fee per swap |
+| Post-swap fees | `BaseDynamicAfterFee` | Fee computed after swap |
+| Fixed hook fees | `BaseHookFee` | Simple fee extraction |
+| MEV protection | `AntiSandwichHook` | Block sandwich attacks |
+| JIT protection | `LiquidityPenaltyHook` | Penalize just-in-time LPs |
+| Limit orders | `LimitOrderHook` | Conditional swap execution |
+| Yield on idle | `ReHypothecationHook` | Earn on unused liquidity |
+| Oracle | `BaseOracleHook` | TWAP/price feed |
+| V3-compatible oracle | `OracleHookWithV3Adapters` | V3 `IUniswapV3Pool` interface |
 
 **Generation flow:**
 
@@ -57,7 +121,7 @@ Generate Uniswap v4 hook contracts with the OpenZeppelin Contracts Wizard MCP to
 5. Set access control (`ownable`, `roles`, `managed`)
 6. Generate via MCP tool or write Solidity from template
 
-**Address encoding:** Permissions are encoded as bits in the hook's deployed address. Use `HookMiner` from `v4-periphery` to mine a deployment salt that produces the correct bit pattern.
+Security-first Solidity template: `references/base-hook-template.md`
 
 Full hook development guide: `references/hook-development.md`
 
@@ -69,12 +133,7 @@ Interact with Uniswap contracts from TypeScript applications.
 import { createPublicClient, createWalletClient, http, parseAbi } from 'viem';
 import { mainnet, base, arbitrum } from 'viem/chains';
 
-const publicClient = createPublicClient({
-  chain: mainnet,
-  transport: http(),
-});
-
-// Read pool state
+const publicClient = createPublicClient({ chain: mainnet, transport: http() });
 const slot0 = await publicClient.readContract({
   address: poolAddress,
   abi: parseAbi(['function slot0() view returns (uint160,int24,uint16,uint16,uint16,uint8,bool)']),
@@ -82,7 +141,7 @@ const slot0 = await publicClient.readContract({
 });
 ```
 
-Full viem patterns: `references/viem-patterns.md`
+Full viem patterns (clients, reads, writes, accounts, contracts, wagmi): `references/viem-patterns.md`
 
 ## Test
 
@@ -102,9 +161,9 @@ Full viem patterns: `references/viem-patterns.md`
 | 8 | Fuzz testing completed | [ ] |
 | 9 | Invariant testing completed | [ ] |
 
-**Risk thresholds:**
+**Permission risk levels:**
 
-| Permission | Risk Level | Notes |
+| Permission | Risk | Notes |
 |---|---|---|
 | `beforeSwapReturnDelta` | CRITICAL | NoOp attack vector -- can drain user funds |
 | `beforeSwap`, `beforeRemoveLiquidity` | HIGH | Can block swaps or trap funds |
@@ -121,10 +180,12 @@ Full viem patterns: `references/viem-patterns.md`
 | Callbacks with external calls | < 100,000 gas | 300,000 gas |
 
 ```bash
-# Profile hook gas usage with Foundry
 forge test --match-test test_beforeSwapGas --gas-report
 forge snapshot --match-contract MyHookTest
 ```
+
+Vulnerability catalog (12 patterns): `references/vulnerabilities-catalog.md`
+Full audit checklist (12 sections): `references/audit-checklist.md`
 
 ## Deploy
 
@@ -133,6 +194,17 @@ forge snapshot --match-contract MyHookTest
 Configure and deploy Continuous Clearing Auctions for fair token distribution.
 
 **Factory address:** `0xCCccCcCAE7503Cac057829BF2811De42E16e0bD5` (v1.1.0)
+
+**Interactive configuration flow (collect up to 4 questions per batch):**
+
+| Batch | Parameters |
+|---|---|
+| 1. Task & Token | Network, token address, total supply, currency |
+| 2. Timing & Pricing | Auction duration, prebid period, floor price, tick spacing |
+| 3. Recipients & Launch | Tokens/funds recipients, start time, minimum funds |
+| 4. Optional Hook | Validation hook address (or none) |
+
+Validate addresses (42 chars `0x...`), amounts, and block sequences after each batch.
 
 **Supported chains:**
 
@@ -145,43 +217,17 @@ Configure and deploy Continuous Clearing Auctions for fair token distribution.
 
 **Deployment flow:**
 
-1. Configure auction parameters (currency, recipients, timing, pricing)
-2. Generate supply schedule (normalized convex curve)
-3. Encode schedule to packed bytes
+1. Configure auction parameters via interactive flow
+2. Generate supply schedule (normalized convex curve via MCP tool `generate_supply_schedule`)
+3. Encode schedule to packed bytes (each `{mps, blockDelta}` packed into uint64)
 4. Deploy via Factory with CREATE2
-5. Call `onTokensReceived()` post-deployment
+5. Call `onTokensReceived()` post-deployment (required)
 
 Full CCA deployment guide: `references/cca-deployment.md`
 
-## Manage
+## Integrate
 
-### Liquidity Positions
-
-Plan and create V2/V3/V4 concentrated liquidity positions.
-
-**Position type comparison:**
-
-| Feature | V2 | V3 | V4 |
-|---|---|---|---|
-| Range | Full only | Concentrated | Concentrated + hooks |
-| Fee tiers | 0.3% fixed | 0.01-1% | Dynamic (hooks) |
-| Gas cost | Lowest | Medium | Higher (singleton) |
-| NFT positions | ERC20 shares | ERC721 | ERC6909/ERC1155 |
-
-**Strategy matrix:**
-
-| Strategy | Range Width | Risk | Rebalance Frequency |
-|---|---|---|---|
-| Stablecoin LP | +/-0.5-1% | Very Low | Weekly |
-| Correlated Asset LP | +/-2-5% | Low | Bi-weekly |
-| Major Pair LP | +/-10-20% | Medium | Weekly |
-| Active Rebalancing | +/-5-10% | Medium-High | Daily to hourly |
-
-Full liquidity strategies: `references/liquidity-strategies.md`
-
-### Swap Execution
-
-Execute swaps via Trading API, Universal Router SDK, or direct contracts.
+### Trading API (Swaps)
 
 **Integration method decision:**
 
@@ -191,6 +237,7 @@ Execute swaps via Trading API, Universal Router SDK, or direct contracts.
 | Backend script/bot | Trading API |
 | Smart contract integration | Universal Router direct |
 | Full control over routing | Universal Router SDK |
+| V4-specific features | V4 SDK (`@uniswap/v4-sdk`) |
 
 **Trading API 3-step flow:**
 
@@ -202,11 +249,11 @@ Execute swaps via Trading API, Universal Router SDK, or direct contracts.
 
 Base URL: `https://trade-api.gateway.uniswap.org/v1`
 
-Full SDK integration: `references/sdk-integration.md`
+Advanced patterns (ERC-4337 smart accounts, WETH on L2s, rate limiting): `references/advanced-patterns.md`
+
+Full SDK integration (Trading API, Universal Router, V4 SDK): `references/sdk-integration.md`
 
 ### V4 SDK
-
-Build swap and liquidity experiences with the v4 SDK.
 
 **Key differences from V3:**
 
@@ -216,8 +263,6 @@ Build swap and liquidity experiences with the v4 SDK.
 | Pool architecture | One contract per pool | Singleton PoolManager |
 | Native ETH | Wrap to WETH | `Ether.onChain(chainId)` |
 | Token approvals | Direct approve | Permit2 required |
-
-**v4 swap pattern:**
 
 ```typescript
 import { Actions, V4Planner } from '@uniswap/v4-sdk';
@@ -232,8 +277,6 @@ const routePlanner = new RoutePlanner();
 routePlanner.addCommand(CommandType.V4_SWAP, [v4Planner.actions, v4Planner.params]);
 ```
 
-Full v4 SDK guide: `references/sdk-integration.md`
-
 ### x402 Payments
 
 Handle HTTP 402 payment challenges for API access.
@@ -246,18 +289,18 @@ API request -> 402 challenge -> Parse payment requirements
   -> Sign payment -> Retry request -> 200 OK
 ```
 
-**Supported protocols:**
-
 | Protocol | Handler | Mechanism |
 |---|---|---|
 | MPP v1 | Tempo CLI | Wallet-based auto-payment |
 | x402 v1 | Manual signing | EIP-3009 `transferWithAuthorization` |
 
+Credential construction (MPP/x402): `references/credential-construction.md`
+Trading API funding flows (swap + bridge scripts): `references/trading-api-flows.md`
 Full x402 payment guide: `references/x402-payments.md`
 
 ## Command Quick Reference
 
-### Foundry (Hook Development)
+### Foundry
 
 | Command | Purpose |
 |---|---|
@@ -265,11 +308,8 @@ Full x402 payment guide: `references/x402-payments.md`
 | `forge build` | Compile hook contracts |
 | `forge test --gas-report` | Test with gas profiling |
 | `forge snapshot` | Gas snapshot comparison |
-| `forge verify-contract <addr> <contract>` | Verify on block explorer |
-| `cast call <addr> "slot0()" --rpc-url <rpc>` | Read pool state |
-| `cast send <addr> "transfer(...)" --rpc-url <rpc>` | Send transaction |
 
-### Trading API (Swaps)
+### Trading API
 
 | Endpoint | Purpose |
 |---|---|
@@ -277,25 +317,27 @@ Full x402 payment guide: `references/x402-payments.md`
 | `POST /quote` | Get executable quote with routing |
 | `POST /swap` | Get ready-to-sign transaction |
 
-### DexScreener (Market Data)
+### Data Providers
 
-| Endpoint | Purpose |
-|---|---|
-| `/token-pairs/v1/{network}/{address}` | Pool discovery and price data |
-| `/latest/dex/search?q={query}` | Token search by keyword |
+| Provider | Endpoint | Use For |
+|---|---|---|
+| DexScreener | `/token-pairs/v1/{network}/{address}` | Pool discovery, prices, liquidity |
+| DexScreener | `/latest/dex/search?q={query}` | Token search by keyword |
+| DefiLlama | `/yields.llama.fi/pools` | APY, TVL, volume |
 
-### DefiLlama (Yield Data)
+## Deep Expertise References
 
-| Endpoint | Purpose |
-|---|---|
-| `/yields.llama.fi/pools` | Pool APY and TVL data |
+For complex questions requiring deep domain knowledge:
+
+- **Swap integration expertise**: `references/swap-integration-expert.md`
+- **Viem/wagmi expertise**: `references/viem-integration-expert.md`
 
 ## Key Rules
 
 ### Security
 
 1. **Verify all contract addresses** before interaction -- addresses differ per chain
-2. **Run security audit** on all hooks before deployment -- see `references/hook-development.md`
+2. **Run security audit** on all hooks before deployment -- see `references/audit-checklist.md`
 3. **Never enable `beforeSwapReturnDelta`** without understanding NoOp attack vectors
 4. **Always validate swap responses** before broadcasting -- check `data` is non-empty hex
 5. **Use Permit2** for ERC20 approvals -- direct approve to Universal Router will not work
@@ -335,14 +377,25 @@ Full x402 payment guide: `references/x402-payments.md`
 
 | Topic | File |
 |---|---|
-| V4 hook development & security audit | `references/hook-development.md` |
+| V4 hook development & permissions | `references/hook-development.md` |
+| Security-first hook Solidity template | `references/base-hook-template.md` |
+| Vulnerability catalog (12 patterns) | `references/vulnerabilities-catalog.md` |
+| Pre-deployment audit checklist | `references/audit-checklist.md` |
 | CCA auction configuration & deployment | `references/cca-deployment.md` |
 | SDK & Trading API integration | `references/sdk-integration.md` |
+| Advanced patterns (ERC-4337, WETH, rate limiting) | `references/advanced-patterns.md` |
+| Swap & liquidity planning data providers | `references/data-providers.md` |
+| Position types & deep link parameters | `references/position-types.md` |
 | Concentrated liquidity strategies | `references/liquidity-strategies.md` |
-| Viem contract interaction patterns | `references/viem-patterns.md` |
+| Viem & wagmi integration patterns | `references/viem-patterns.md` |
 | x402 payment handling | `references/x402-payments.md` |
+| MPP/x402 credential construction | `references/credential-construction.md` |
+| Trading API funding flows (swap+bridge) | `references/trading-api-flows.md` |
+| Swap integration deep expertise | `references/swap-integration-expert.md` |
+| Viem/wagmi deep expertise | `references/viem-integration-expert.md` |
 | Troubleshooting & common issues | `references/troubleshooting.md` |
-| Chain support (names and IDs) | `_shared/chain-support.md` |
+| Chain support (12 chains, RPCs, tokens) | `references/chains.md` |
+| Chain name mapping (basic) | `_shared/chain-support.md` |
 | Native token addresses | `_shared/native-tokens.md` |
 | Pre-flight checks | `_shared/preflight.md` |
 

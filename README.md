@@ -9,7 +9,7 @@ A collection of 7 agent skills for on-chain trading on OKX X Layer, served via a
 | `okx-trading` | Research, security, swaps, DeFi yield, portfolio, wallets |
 | `okx-xlayer-agent` | Autonomous agent loops on X Layer: DCA, auto-compound, risk gates |
 | `okx-uniswap` | Uniswap V3 LP management, Trading API swaps, x402 payments |
-| `okx-uniswap-dev` | Uniswap v4 hook development, CCA deployment, SDK integration |
+| `okx-uniswap-dev` | Unified Uniswap dev: v4 hooks & security audit, CCA auctions, swap/liquidity planning, Trading API, V4 SDK, x402 payments, viem/wagmi |
 | `okx-portfolio-guardian` | Risk monitoring, stop-loss automation, approval tracking, alerts |
 | `okx-meme-intelligence` | Meme token analysis, dev reputation, sniper detection, safety scoring |
 | `okx-ecosystem-discovery` | Browse, search, and install skills from the ecosystem |
