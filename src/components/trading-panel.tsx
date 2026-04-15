@@ -78,6 +78,8 @@ const files: FileEntry[] = [
   { id: "trading-openai", filename: "agents/openai.yaml", content: tradingOpenai, isCode: true },
 ];
 
+export { files };
+
 export default function TradingPanel() {
   return <FileListPanel files={files} ariaLabel="Trading skill files" />;
 }

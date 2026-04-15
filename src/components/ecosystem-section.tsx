@@ -4,6 +4,7 @@ import SolarGlobalBoldDuotone from "~icons/solar/global-bold-duotone";
 import SolarArrowRightUpBoldDuotone from "~icons/solar/arrow-right-up-bold-duotone";
 import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
 import SolarCheckCircleBoldDuotone from "~icons/solar/check-circle-bold-duotone";
+import SolarStarBoldDuotone from "~icons/solar/star-bold-duotone";
 import { Button } from "@heroui/react";
 
 function SkillCard({
@@ -78,7 +79,7 @@ export default function EcosystemSection() {
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
           <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm">
             <SolarGlobalBoldDuotone className="text-zinc-500" />
-            {ecosystemSkills.length} Skills in the Ecosystem
+            {ecosystemSkills.length + 1} Skills in the Ecosystem
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
             More skills, more chains, more coverage
@@ -90,7 +91,33 @@ export default function EcosystemSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+        <div className="border p-6 rounded-xl sm:col-span-2 lg:col-span-3 mt-8">
+          <div className="flex items-start gap-2 mb-3">
+            <SolarStarBoldDuotone className="size-5 mt-0.5" />
+            <span className="text-sm font-medium">Featured</span>
+          </div>
+          <h3 className="text-xl font-medium mb-2">okx-ecosystem-discovery</h3>
+          <p className="text-sm text-zinc-600 mb-4">
+            Browse, search, and install skills from the OKX Trade Skills ecosystem. Discover available skills, find skills for specific use cases like DeFi, swapping, security, or LP management, and get help choosing the right skill for your needs.
+          </p>
+          <button
+            className="border rounded-xl p-1 w-full max-w-2xl cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              const command = "npx flins@latest add okxskills.noval.me --skill okx-ecosystem-discovery";
+              navigator.clipboard.writeText(command);
+            }}
+          >
+            <div className="bg-zinc-800 px-3 py-2 rounded-lg flex items-center justify-between gap-2">
+              <code className="text-zinc-200 font-mono text-xs truncate">
+                npx flins@latest add okxskills.noval.me --skill okx-ecosystem-discovery
+              </code>
+              <SolarCopyLineDuotone className="size-4 text-zinc-400" />
+            </div>
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           {ecosystemSkills.map((skill) => (
             <SkillCard key={skill.url} {...skill} />
           ))}

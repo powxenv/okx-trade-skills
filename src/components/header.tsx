@@ -4,7 +4,7 @@ import SolarHamburgerMenuLineDuotone from "~icons/solar/hamburger-menu-line-duot
 
 const links = [
   { label: "Why", href: "#why" },
-  { label: "Guides", href: "#guides" },
+  { label: "Skills", href: "#okx-uniswap" },
   { label: "Ecosystem", href: "#ecosystem" },
   { label: "Install", href: "#install" },
   {

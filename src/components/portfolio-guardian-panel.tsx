@@ -32,6 +32,8 @@ const files: FileEntry[] = [
   { id: "pg-openai", filename: "agents/openai.yaml", content: openai, isCode: true },
 ];
 
+export { files };
+
 export default function PortfolioGuardianPanel() {
   return <FileListPanel files={files} ariaLabel="Portfolio Guardian skill files" />;
 }

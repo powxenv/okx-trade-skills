@@ -44,6 +44,8 @@ const files: FileEntry[] = [
   { id: "xlayer-openai", filename: "agents/openai.yaml", content: xlayerOpenai, isCode: true },
 ];
 
+export { files };
+
 export default function XlayerPanel() {
   return <FileListPanel files={files} ariaLabel="X Layer skill files" />;
 }

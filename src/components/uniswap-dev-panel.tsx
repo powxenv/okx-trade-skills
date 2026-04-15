@@ -54,6 +54,8 @@ const files: FileEntry[] = [
   { id: "udev-openai", filename: "agents/openai.yaml", content: openai, isCode: true },
 ];
 
+export { files };
+
 export default function UniswapDevPanel() {
   return <FileListPanel files={files} ariaLabel="Uniswap Dev skill files" />;
 }

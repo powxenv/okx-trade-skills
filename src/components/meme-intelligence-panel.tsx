@@ -30,6 +30,8 @@ const files: FileEntry[] = [
   { id: "meme-openai", filename: "agents/openai.yaml", content: openai, isCode: true },
 ];
 
+export { files };
+
 export default function MemeIntelligencePanel() {
   return <FileListPanel files={files} ariaLabel="Meme Intelligence skill files" />;
 }

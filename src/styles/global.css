@@ -34,42 +34,49 @@ html {
   --font-sans: "Satoshi", sans-serif;
 }
 
+/*
+ * HeroUI Theme Customization
+ * Add this to your global.css after importing @heroui/styles
+ * Only includes base variables from variables.css
+ * @see https://heroui.com/docs/react/getting-started/theming
+ */
+
 :root,
 .light,
 .default,
 [data-theme="light"],
 [data-theme="default"] {
   /* Theme Colors (Light Mode) */
-  --accent: oklch(62.66% 0.1961 255.1);
+  --accent: oklch(14.07% 0.0044 285.82);
   --accent-foreground: oklch(99.11% 0 0);
-  --background: oklch(97.02% 0.0015 255.1);
-  --border: oklch(90% 0.0015 255.1);
-  --danger: oklch(65.32% 0.2335 25.89);
+  --background: oklch(97.02% 0.0015 285.82);
+  --border: oklch(90.00% 0.0015 285.82);
+  --danger: oklch(65.32% 0.2335 29.58);
   --danger-foreground: oklch(99.11% 0 0);
-  --default: oklch(94% 0.0015 255.1);
-  --default-foreground: oklch(21.03% 0.0059 255.1);
-  --field-background: oklch(100% 0.0008 255.1);
-  --field-foreground: oklch(21.03% 0.0015 255.1);
-  --field-placeholder: oklch(55.17% 0.003 255.1);
-  --focus: oklch(62.66% 0.1961 255.1);
-  --foreground: oklch(21.03% 0.0015 255.1);
-  --muted: oklch(55.17% 0.003 255.1);
-  --overlay: oklch(100% 0.0004 255.1);
-  --overlay-foreground: oklch(21.03% 0.0015 255.1);
-  --scrollbar: oklch(87.1% 0.0015 255.1);
-  --segment: oklch(100% 0.0015 255.1);
-  --segment-foreground: oklch(21.03% 0.0015 255.1);
-  --separator: oklch(92% 0.0015 255.1);
-  --success: oklch(73.29% 0.1941 150.96);
-  --success-foreground: oklch(21.03% 0.0059 150.96);
-  --surface: oklch(100% 0.0008 255.1);
-  --surface-foreground: oklch(21.03% 0.0015 255.1);
-  --surface-secondary: oklch(95.24% 0.0012 255.1);
-  --surface-secondary-foreground: oklch(21.03% 0.0015 255.1);
-  --surface-tertiary: oklch(93.73% 0.0012 255.1);
-  --surface-tertiary-foreground: oklch(21.03% 0.0015 255.1);
-  --warning: oklch(78.19% 0.159 72.48);
-  --warning-foreground: oklch(21.03% 0.0059 72.48);
+  --default: oklch(94.00% 0.0015 285.82);
+  --default-foreground: oklch(21.03% 0.0059 285.82);
+  --field-background: oklch(100.00% 0.0008 285.82);
+  --field-foreground: oklch(21.03% 0.0015 285.82);
+  --field-placeholder: oklch(55.17% 0.0030 285.82);
+  --focus: oklch(14.07% 0.0044 285.82);
+  --foreground: oklch(21.03% 0.0015 285.82);
+  --muted: oklch(55.17% 0.0030 285.82);
+  --overlay: oklch(100.00% 0.0004 285.82);
+  --overlay-foreground: oklch(21.03% 0.0015 285.82);
+  --scrollbar: oklch(87.10% 0.0015 285.82);
+  --segment: oklch(100.00% 0.0015 285.82);
+  --segment-foreground: oklch(21.03% 0.0015 285.82);
+  --separator: oklch(92.00% 0.0015 285.82);
+  --success: oklch(73.29% 0.1941 154.65);
+  --success-foreground: oklch(21.03% 0.0059 154.65);
+  --surface: oklch(100.00% 0.0008 285.82);
+  --surface-foreground: oklch(21.03% 0.0015 285.82);
+  --surface-secondary: oklch(95.24% 0.0012 285.82);
+  --surface-secondary-foreground: oklch(21.03% 0.0015 285.82);
+  --surface-tertiary: oklch(93.73% 0.0012 285.82);
+  --surface-tertiary-foreground: oklch(21.03% 0.0015 285.82);
+  --warning: oklch(78.19% 0.1590 76.17);
+  --warning-foreground: oklch(21.03% 0.0059 76.17);
 
   /* Border Radius */
   --radius: 0.5rem;
@@ -80,39 +87,40 @@ html {
 [data-theme="dark"] {
   color-scheme: dark;
   /* Theme Colors (Dark Mode) */
-  --accent: oklch(62.66% 0.1961 255.1);
+  --accent: oklch(14.07% 0.0044 285.82);
   --accent-foreground: oklch(99.11% 0 0);
-  --background: oklch(12% 0.0015 255.1);
-  --border: oklch(28% 0.0015 255.1);
-  --danger: oklch(59.4% 0.1973 24.78);
+  --background: oklch(12.00% 0.0015 285.82);
+  --border: oklch(28.00% 0.0015 285.82);
+  --danger: oklch(59.40% 0.1973 28.47);
   --danger-foreground: oklch(99.11% 0 0);
-  --default: oklch(27.4% 0.0015 255.1);
+  --default: oklch(27.40% 0.0015 285.82);
   --default-foreground: oklch(99.11% 0 0);
-  --field-background: oklch(21.03% 0.003 255.1);
-  --field-foreground: oklch(99.11% 0.0015 255.1);
-  --field-placeholder: oklch(70.5% 0.003 255.1);
-  --focus: oklch(62.66% 0.1961 255.1);
-  --foreground: oklch(99.11% 0.0015 255.1);
-  --muted: oklch(70.5% 0.003 255.1);
-  --overlay: oklch(21.03% 0.003 255.1);
-  --overlay-foreground: oklch(99.11% 0.0015 255.1);
-  --scrollbar: oklch(70.5% 0.0015 255.1);
-  --segment: oklch(39.64% 0.0015 255.1);
-  --segment-foreground: oklch(99.11% 0.0015 255.1);
-  --separator: oklch(25% 0.0015 255.1);
-  --success: oklch(73.29% 0.1941 150.96);
-  --success-foreground: oklch(21.03% 0.0059 150.96);
-  --surface: oklch(21.03% 0.003 255.1);
-  --surface-foreground: oklch(99.11% 0.0015 255.1);
-  --surface-secondary: oklch(25.7% 0.0023 255.1);
-  --surface-secondary-foreground: oklch(99.11% 0.0015 255.1);
-  --surface-tertiary: oklch(27.21% 0.0023 255.1);
-  --surface-tertiary-foreground: oklch(99.11% 0.0015 255.1);
-  --warning: oklch(82.03% 0.1392 76.49);
-  --warning-foreground: oklch(21.03% 0.0059 76.49);
+  --field-background: oklch(21.03% 0.0030 285.82);
+  --field-foreground: oklch(99.11% 0.0015 285.82);
+  --field-placeholder: oklch(70.50% 0.0030 285.82);
+  --focus: oklch(14.07% 0.0044 285.82);
+  --foreground: oklch(99.11% 0.0015 285.82);
+  --muted: oklch(70.50% 0.0030 285.82);
+  --overlay: oklch(21.03% 0.0030 285.82);
+  --overlay-foreground: oklch(99.11% 0.0015 285.82);
+  --scrollbar: oklch(70.50% 0.0015 285.82);
+  --segment: oklch(39.64% 0.0015 285.82);
+  --segment-foreground: oklch(99.11% 0.0015 285.82);
+  --separator: oklch(25.00% 0.0015 285.82);
+  --success: oklch(73.29% 0.1941 154.65);
+  --success-foreground: oklch(21.03% 0.0059 154.65);
+  --surface: oklch(21.03% 0.0030 285.82);
+  --surface-foreground: oklch(99.11% 0.0015 285.82);
+  --surface-secondary: oklch(25.70% 0.0023 285.82);
+  --surface-secondary-foreground: oklch(99.11% 0.0015 285.82);
+  --surface-tertiary: oklch(27.21% 0.0023 285.82);
+  --surface-tertiary-foreground: oklch(99.11% 0.0015 285.82);
+  --warning: oklch(82.03% 0.1392 80.18);
+  --warning-foreground: oklch(21.03% 0.0059 80.18);
 }
 
 @layer base {
+
   h1,
   h2,
   h3,
@@ -131,6 +139,7 @@ html {
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
       display: none;
     }

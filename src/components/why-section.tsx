@@ -4,6 +4,10 @@ import SolarBoltBoldDuotone from "~icons/solar/bolt-bold-duotone";
 import SolarGraphUpBoldDuotone from "~icons/solar/graph-up-bold-duotone";
 import SolarLinkRoundBoldDuotone from "~icons/solar/link-round-bold-duotone";
 import SolarShieldCheckBoldDuotone from "~icons/solar/shield-check-bold-duotone";
+import InstallCommand from "./skill-sections/shared/install-command";
+import ViewFilesButton from "./skill-sections/shared/view-files-button";
+
+import { files as tradingFiles } from "./trading-panel";
 
 const painPoints = [
   "Open 5 tabs just to figure out if a token is worth buying",
@@ -63,6 +67,13 @@ export default function WhySection() {
                 </div>
               ))}
             </div>
+
+            <InstallCommand skillName="okx-trading" />
+            <ViewFilesButton
+              files={tradingFiles}
+              ariaLabel="Trading skill files"
+              count={28}
+            />
           </div>
 
           <div className="grid grid-cols-1 gap-4">
