@@ -53,7 +53,7 @@ export default function UniswapDev() {
 
             <div className="grid grid-cols-3 gap-6 mt-8">
               {resources.map((r) => (
-                <div>
+                <div key={r.label}>
                   <div className="text-2xl -tracking-wider font-medium">{r.count}</div>
                   <div className="text-sm text-zinc-500">{r.label}</div>
                 </div>

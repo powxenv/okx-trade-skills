@@ -70,8 +70,8 @@ export default function PortfolioGuardian() {
             />
 
             <div className="grid grid-cols-2 gap-3 mb-6">
-              {metrics.map((m, idx) => (
-                <div className={`border p-4 rounded-xl bg-white shadow-xl shadow-black/6`}>
+              {metrics.map((m) => (
+                <div key={m.label} className={`border p-4 rounded-xl bg-white shadow-xl shadow-black/6`}>
                   <div className="size-8 border flex justify-center items-center rounded-lg">
                     {m.icon}
                   </div>

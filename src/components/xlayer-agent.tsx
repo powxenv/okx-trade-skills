@@ -1,3 +1,4 @@
+import React from "react";
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 import SectionHeader from "./shared/section-header";
@@ -52,8 +53,8 @@ export default function XlayerAgent() {
 
           <div className="flex flex-col gap-4">
             {steps.map((step, idx) => (
-              <>
-                <div key={step.title} className="relative">
+              <React.Fragment key={step.title}>
+                <div className="relative">
                   <div className={`border p-5 rounded-xl bg-white shadow-xl shadow-black/6 ${idx === 0 ? "lg:rotate-1" : idx === 1 ? "lg:-rotate-1" : "lg:rotate-2"}`}>
                     <div className="flex items-start gap-4">
                       <div className="size-10 border flex justify-center items-center rounded-lg shrink-0">
@@ -73,7 +74,7 @@ export default function XlayerAgent() {
                     <SolarArrowDownLinear className="size-6 text-zinc-300" />
                   </div>
                 )}
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>
