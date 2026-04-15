@@ -69,7 +69,7 @@ export default function PortfolioGuardian() {
               description="Stop checking prices every 5 minutes. Set stop-loss triggers, track impermanent loss, and get pinged when something actually needs your attention."
             />
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 mb-6">
               {metrics.map((m, idx) => (
                 <div className={`border p-4 rounded-xl bg-white shadow-xl shadow-black/6`}>
                   <div className="size-8 border flex justify-center items-center rounded-lg">
@@ -86,7 +86,6 @@ export default function PortfolioGuardian() {
             <ViewFilesButton
               files={portfolioGuardianFiles}
               ariaLabel="Portfolio Guardian skill files"
-              count={13}
             />
           </div>
         </div>

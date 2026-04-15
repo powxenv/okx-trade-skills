@@ -53,7 +53,7 @@ export default function OkxTrading() {
               want.
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">
               {stats.map((stat) => (
                 <div
                   key={stat.label}
@@ -72,7 +72,6 @@ export default function OkxTrading() {
             <ViewFilesButton
               files={tradingFiles}
               ariaLabel="Trading skill files"
-              count={28}
             />
           </div>
 

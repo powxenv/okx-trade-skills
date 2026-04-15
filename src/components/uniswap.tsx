@@ -61,7 +61,6 @@ export default function Uniswap() {
             ))}
           </div>
 
-          {/* Right: Header + Live Metrics */}
           <div className="order-1 lg:order-2">
             <SectionHeader
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
@@ -70,7 +69,6 @@ export default function Uniswap() {
               description="Your agent can swap, add liquidity, and manage positions on Uniswap without ever opening a browser."
             />
 
-            {/* Live Metrics */}
             <div className="border rounded-xl p-5 bg-zinc-50 mb-6">
               <div className="flex items-center gap-2 mb-4">
                 <SolarConfettiBoldDuotone className="size-4 text-zinc-400" />
@@ -96,7 +94,6 @@ export default function Uniswap() {
             <ViewFilesButton
               files={uniswapFiles}
               ariaLabel="Uniswap skill files"
-              count={15}
             />
           </div>
         </div>

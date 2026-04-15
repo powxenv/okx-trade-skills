@@ -8,19 +8,17 @@ import FileListPanel from "./file-list-panel";
 interface ViewFilesButtonProps {
   files: FileEntry[];
   ariaLabel: string;
-  count: number;
 }
 
 export default function ViewFilesButton({
   files,
   ariaLabel,
-  count,
 }: ViewFilesButtonProps) {
   return (
     <Modal>
       <Button className="mx-auto mt-4">
         <SolarDocumentsBoldDuotone className="size-4" />
-        View {count} Files
+        View {files.length} Files
       </Button>
       <Modal.Backdrop>
         <Modal.Container>

@@ -1,4 +1,4 @@
-import { Button, Tabs } from "@heroui/react";
+import { Button, Tabs, Tooltip } from "@heroui/react";
 import SolarShieldKeyholeBoldDuotone from "~icons/solar/shield-keyhole-bold-duotone";
 import SolarLockKeyholeBoldDuotone from "~icons/solar/lock-keyhole-bold-duotone";
 import SolarUsersGroupTwoRoundedBoldDuotone from "~icons/solar/users-group-two-rounded-bold-duotone";
@@ -38,9 +38,14 @@ function InstallTabs() {
               <span className="-tracking-wider font-medium">
                 Copy to your AI agents, any agent
               </span>
-              <Button isIconOnly size="sm" variant="ghost" onClick={promptCopy.copy}>
-                {promptCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
-              </Button>
+              <Tooltip delay={0}>
+                <Button isIconOnly size="sm" variant="ghost" onClick={promptCopy.copy}>
+                  {promptCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                </Button>
+                <Tooltip.Content>
+                  <p>{promptCopy.copied ? "Copied" : "Copy"}</p>
+                </Tooltip.Content>
+              </Tooltip>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200">
               Read https://okxskills.noval.me/AGENTS.md and install OKX Trade
@@ -56,9 +61,14 @@ function InstallTabs() {
               <span className="-tracking-wider font-medium">
                 Copy to your terminal
               </span>
-              <Button isIconOnly size="sm" variant="ghost" onClick={flinsCopy.copy}>
-                {flinsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
-              </Button>
+              <Tooltip delay={0}>
+                <Button isIconOnly size="sm" variant="ghost" onClick={flinsCopy.copy}>
+                  {flinsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                </Button>
+                <Tooltip.Content>
+                  <p>{flinsCopy.copied ? "Copied" : "Copy"}</p>
+                </Tooltip.Content>
+              </Tooltip>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200 font-mono text-sm">
               npx flins@latest add okxskills.noval.me
@@ -73,9 +83,14 @@ function InstallTabs() {
               <span className="-tracking-wider font-medium">
                 Copy to your terminal
               </span>
-              <Button isIconOnly size="sm" variant="ghost" onClick={skillsCopy.copy}>
-                {skillsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
-              </Button>
+              <Tooltip delay={0}>
+                <Button isIconOnly size="sm" variant="ghost" onClick={skillsCopy.copy}>
+                  {skillsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                </Button>
+                <Tooltip.Content>
+                  <p>{skillsCopy.copied ? "Copied" : "Copy"}</p>
+                </Tooltip.Content>
+              </Tooltip>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200 font-mono text-sm">
               npx skills@latest add https://okxskills.noval.me

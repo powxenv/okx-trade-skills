@@ -28,7 +28,7 @@ export default function XlayerAgent() {
               description="X Layer has no gas fees. Your agent can trade, compound, and pay for itself using x402 without you ever topping up."
             />
 
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-6 mb-6">
               <div>
                 <div className="text-2xl -tracking-wider font-medium">Zero</div>
                 <div className="text-sm text-zinc-500">Gas</div>
@@ -43,14 +43,11 @@ export default function XlayerAgent() {
               </div>
             </div>
 
-            <div className="mt-8">
-              <InstallCommand skillName="okx-xlayer-agent" />
-              <ViewFilesButton
-                files={xlayerFiles}
-                ariaLabel="X Layer Agent skill files"
-                count={20}
-              />
-            </div>
+            <InstallCommand skillName="okx-xlayer-agent" />
+            <ViewFilesButton
+              files={xlayerFiles}
+              ariaLabel="X Layer Agent skill files"
+            />
           </div>
 
           <div className="flex flex-col gap-4">

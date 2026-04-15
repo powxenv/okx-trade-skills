@@ -1,4 +1,5 @@
 import { cn } from "@heroui/react";
+import { Tooltip } from "@heroui/react";
 import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
 import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
 import { useCopy } from "../../hooks/use-copy";
@@ -13,25 +14,32 @@ export default function InstallCommand({ skillName, className }: InstallCommandP
   const copy = useCopy(command);
 
   return (
-    <button
-      className={cn(
-        "border rounded-xl p-1 w-full max-w-2xl mx-auto block cursor-pointer mt-8",
-        className
-      )}
-      onClick={copy.copy}
-    >
-      <div className="bg-zinc-800 px-3 py-2 rounded-lg flex items-center justify-between gap-2">
-        <code className="text-zinc-200 font-mono text-xs truncate">
-          {command}
-        </code>
-        <div>
-          {copy.copied ? (
-            <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
-          ) : (
-            <SolarCopyLineDuotone className="size-4 text-zinc-400" />
+    <Tooltip delay={0}>
+      <Tooltip.Trigger aria-label="Copy install command">
+        <button
+          className={cn(
+            "border rounded-xl p-1 w-full max-w-2xl mx-auto block cursor-pointer",
+            className
           )}
-        </div>
-      </div>
-    </button>
+          onClick={copy.copy}
+        >
+          <div className="bg-zinc-800 px-3 py-2 rounded-lg flex items-center justify-between gap-2">
+            <code className="text-zinc-200 font-mono text-xs truncate">
+              {command}
+            </code>
+            <div>
+              {copy.copied ? (
+                <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
+              ) : (
+                <SolarCopyLineDuotone className="size-4 text-zinc-400" />
+              )}
+            </div>
+          </div>
+        </button>
+      </Tooltip.Trigger>
+      <Tooltip.Content>
+        <p>{copy.copied ? "Copied" : "Copy"}</p>
+      </Tooltip.Content>
+    </Tooltip>
   );
 }

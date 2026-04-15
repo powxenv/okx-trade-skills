@@ -44,7 +44,6 @@ export default function MemeIntelligence() {
             <ViewFilesButton
               files={memeIntelligenceFiles}
               ariaLabel="Meme Intelligence skill files"
-              count={12}
             />
           </div>
 

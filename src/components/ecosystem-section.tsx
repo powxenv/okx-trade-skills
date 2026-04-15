@@ -5,7 +5,7 @@ import SolarArrowRightUpBoldDuotone from "~icons/solar/arrow-right-up-bold-duoto
 import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
 import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
 import SolarStarBoldDuotone from "~icons/solar/star-bold-duotone";
-import { Button } from "@heroui/react";
+import { Tooltip } from "@heroui/react";
 import InstallCommand from "./shared/install-command";
 
 function SkillCard({
@@ -52,23 +52,30 @@ function SkillCard({
         <SolarArrowRightUpBoldDuotone className="size-5 text-zinc-400 group-hover:text-zinc-700 transition-colors shrink-0 mt-1" />
       </div>
       <p className="text-sm text-zinc-600 mb-3">{description}</p>
-      <button
-        className="border rounded-xl p-1 block w-full cursor-pointer mt-auto"
-        onClick={handleCopy}
-      >
-        <div className="bg-zinc-800 px-3 py-2 rounded-lg flex items-center justify-between gap-2">
-          <code className="text-zinc-200 font-mono text-xs truncate">
-            {command}
-          </code>
-          <div>
-            {copied ? (
-              <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
-            ) : (
-              <SolarCopyLineDuotone className="size-4 text-zinc-400" />
-            )}
-          </div>
-        </div>
-      </button>
+      <Tooltip delay={0}>
+        <Tooltip.Trigger aria-label="Copy install command">
+          <button
+            className="border rounded-xl p-1 block w-full cursor-pointer mt-auto"
+            onClick={handleCopy}
+          >
+            <div className="bg-zinc-800 px-3 py-2 rounded-lg flex items-center justify-between gap-2">
+              <code className="text-zinc-200 font-mono text-xs truncate">
+                {command}
+              </code>
+              <div>
+                {copied ? (
+                  <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
+                ) : (
+                  <SolarCopyLineDuotone className="size-4 text-zinc-400" />
+                )}
+              </div>
+            </div>
+          </button>
+        </Tooltip.Trigger>
+        <Tooltip.Content>
+          <p>{copied ? "Copied" : "Copy"}</p>
+        </Tooltip.Content>
+      </Tooltip>
     </a>
   );
 }

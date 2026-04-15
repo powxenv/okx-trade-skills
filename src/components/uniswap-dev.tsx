@@ -68,7 +68,7 @@ export default function UniswapDev() {
               title="Ship faster with Uniswap v4 hooks"
               description="Generate boilerplate, audit your hooks, plan swaps with deep links, and integrate the Trading API. Your agent writes the code so you don't have to."
             />
-            <div className="flex gap-2 flex-wrap mb-8">
+            <div className="flex gap-2 flex-wrap mb-6">
               {topics.map((topic) => (
                 <div key={topic} className="border rounded-full px-3 py-1 text-sm text-zinc-600">
                   {topic}
@@ -80,7 +80,6 @@ export default function UniswapDev() {
             <ViewFilesButton
               files={uniswapDevFiles}
               ariaLabel="Uniswap Dev skill files"
-              count={25}
             />
           </div>
         </div>
