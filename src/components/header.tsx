@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button, Drawer, useOverlayState } from "@heroui/react";
-import SolarHamburgerMenuLineDuotone from "~icons/solar/hamburger-menu-line-duotone";
+import SolarHamburgerMenuLinear from "~icons/solar/hamburger-menu-linear";
 
 const links = [
   { label: "Why", href: "#why" },
@@ -20,7 +20,7 @@ function MobileDrawer() {
   return (
     <Drawer state={state}>
       <Button isIconOnly variant="ghost" className="md:hidden" onPress={state.open}>
-        <SolarHamburgerMenuLineDuotone className="size-6 text-zinc-600" />
+        <SolarHamburgerMenuLinear className="size-6 text-zinc-600" />
       </Button>
       <Drawer.Backdrop>
         <Drawer.Content placement="bottom">

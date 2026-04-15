@@ -1,6 +1,6 @@
 import { Button, Tooltip } from "@heroui/react";
-import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
-import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
+import SolarCopyLinear from "~icons/solar/copy-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
 import { useCopy } from "../../hooks/use-copy";
 
 interface FilePanelProps {
@@ -18,7 +18,7 @@ export default function FilePanel({ filename, content }: FilePanelProps) {
           <span className="-tracking-wider font-medium">{filename}</span>
           <Tooltip delay={0}>
             <Button isIconOnly size="sm" variant="ghost" onClick={copy.copy} aria-label={`Copy ${filename}`}>
-              {copy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+              {copy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
             </Button>
             <Tooltip.Content>
               <p>{copy.copied ? "Copied" : "Copy"}</p>

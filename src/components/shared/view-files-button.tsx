@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Modal } from "@heroui/react";
-import SolarDocumentsBoldDuotone from "~icons/solar/documents-bold-duotone";
+import SolarDocumentsLinear from "~icons/solar/documents-linear";
 import type { FileEntry } from "./file-list-panel";
 import FileListPanel from "./file-list-panel";
 
@@ -17,7 +17,7 @@ export default function ViewFilesButton({
   return (
     <Modal>
       <Button className="mx-auto mt-4">
-        <SolarDocumentsBoldDuotone className="size-4" />
+        <SolarDocumentsLinear className="size-4" />
         View {files.length} Files
       </Button>
       <Modal.Backdrop>
@@ -26,7 +26,7 @@ export default function ViewFilesButton({
             <Modal.CloseTrigger />
             <Modal.Header>
               <div className="flex items-center gap-2">
-                <SolarDocumentsBoldDuotone className="size-5 text-zinc-500" />
+                <SolarDocumentsLinear className="size-5 text-zinc-500" />
                 <Modal.Heading>Skill Files</Modal.Heading>
               </div>
             </Modal.Header>

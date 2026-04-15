@@ -1,18 +1,18 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 import SectionHeader from "./shared/section-header";
-import SolarEyeBoldDuotone from "~icons/solar/eye-bold-duotone";
-import SolarBoltBoldDuotone from "~icons/solar/bolt-bold-duotone";
-import SolarRocket2BoldDuotone from "~icons/solar/rocket-2-bold-duotone";
-import SolarArrowDownBoldDuotone from "~icons/solar/arrow-down-bold-duotone";
-import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
+import SolarEyeLinear from "~icons/solar/eye-linear";
+import SolarBoltLinear from "~icons/solar/bolt-linear";
+import SolarRocketLinear from "~icons/solar/rocket-linear";
+import SolarArrowDownLinear from "~icons/solar/arrow-down-linear";
+import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
 
 import { xlayerFiles } from "../data/skill-files";
 
 const steps = [
-  { num: "01", icon: <SolarEyeBoldDuotone className="text-zinc-500" />, title: "Watch", desc: "Track prices, whales, and arb opportunities across the chain" },
-  { num: "02", icon: <SolarBoltBoldDuotone className="text-zinc-500" />, title: "Decide", desc: "Run your strategy, check risk, optimize for gas" },
-  { num: "03", icon: <SolarRocket2BoldDuotone className="text-zinc-500" />, title: "Execute", desc: "Zero-gas txs, auto-compound, pay with x402" },
+  { num: "01", icon: <SolarEyeLinear className="text-zinc-500" />, title: "Watch", desc: "Track prices, whales, and arb opportunities across the chain" },
+  { num: "02", icon: <SolarBoltLinear className="text-zinc-500" />, title: "Decide", desc: "Run your strategy, check risk, optimize for gas" },
+  { num: "03", icon: <SolarRocketLinear className="text-zinc-500" />, title: "Execute", desc: "Zero-gas txs, auto-compound, pay with x402" },
 ];
 
 export default function XlayerAgent() {
@@ -22,7 +22,7 @@ export default function XlayerAgent() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
           <div>
             <SectionHeader
-              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Autonomous Agents"
               title="Agents that run forever on zero gas"
               description="X Layer has no gas fees. Your agent can trade, compound, and pay for itself using x402 without you ever topping up."
@@ -70,7 +70,7 @@ export default function XlayerAgent() {
                 </div>
                 {idx < steps.length - 1 && (
                   <div className="flex justify-center">
-                    <SolarArrowDownBoldDuotone className="size-6 text-zinc-300" />
+                    <SolarArrowDownLinear className="size-6 text-zinc-300" />
                   </div>
                 )}
               </>

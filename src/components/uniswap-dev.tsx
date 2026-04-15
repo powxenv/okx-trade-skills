@@ -1,8 +1,8 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 import SectionHeader from "./shared/section-header";
-import SolarCodeBoldDuotone from "~icons/solar/code-bold-duotone";
-import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
+import SolarCodeLinear from "~icons/solar/code-linear";
+import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
 
 import { uniswapDevFiles } from "../data/skill-files";
 
@@ -63,7 +63,7 @@ export default function UniswapDev() {
 
           <div className="order-1 lg:order-2">
             <SectionHeader
-              badgeIcon={<SolarCodeBoldDuotone className="text-zinc-500" />}
+              badgeIcon={<SolarCodeLinear className="text-zinc-500" />}
               badgeText="Development"
               title="Ship faster with Uniswap v4 hooks"
               description="Generate boilerplate, audit your hooks, plan swaps with deep links, and integrate the Trading API. Your agent writes the code so you don't have to."

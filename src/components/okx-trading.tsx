@@ -1,9 +1,9 @@
-import SolarCloseCircleBoldDuotone from "~icons/solar/close-circle-bold-duotone";
-import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
-import SolarBoltBoldDuotone from "~icons/solar/bolt-bold-duotone";
-import SolarGraphUpBoldDuotone from "~icons/solar/graph-up-bold-duotone";
-import SolarLinkRoundBoldDuotone from "~icons/solar/link-round-bold-duotone";
-import SolarShieldCheckBoldDuotone from "~icons/solar/shield-check-bold-duotone";
+import SolarCloseCircleLinear from "~icons/solar/close-circle-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
+import SolarBoltLinear from "~icons/solar/bolt-linear";
+import SolarGraphUpLinear from "~icons/solar/graph-up-linear";
+import SolarLinkRoundLinear from "~icons/solar/link-round-linear";
+import SolarShieldCheckLinear from "~icons/solar/shield-check-linear";
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 
@@ -25,13 +25,13 @@ const gains = [
 
 const stats = [
   {
-    icon: SolarGraphUpBoldDuotone,
+    icon: SolarGraphUpLinear,
     value: "500+",
     label: "DEX sources",
   },
-  { icon: SolarLinkRoundBoldDuotone, value: "20+", label: "Chains" },
-  { icon: SolarBoltBoldDuotone, value: "<2s", label: "Execution speed" },
-  { icon: SolarShieldCheckBoldDuotone, value: "Zero", label: "Custody risk" },
+  { icon: SolarLinkRoundLinear, value: "20+", label: "Chains" },
+  { icon: SolarBoltLinear, value: "<2s", label: "Execution speed" },
+  { icon: SolarShieldCheckLinear, value: "Zero", label: "Custody risk" },
 ];
 
 export default function OkxTrading() {
@@ -41,7 +41,7 @@ export default function OkxTrading() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div>
             <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg w-fit text-sm">
-              <SolarBoltBoldDuotone className="text-zinc-500" />
+              <SolarBoltLinear className="text-zinc-500" />
               Core Trading
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
@@ -85,7 +85,7 @@ export default function OkxTrading() {
                       key={point}
                       className="flex gap-3 items-start text-sm text-zinc-500"
                     >
-                      <SolarCloseCircleBoldDuotone className="size-5 shrink-0 text-zinc-300" />
+                      <SolarCloseCircleLinear className="size-5 shrink-0 text-zinc-300" />
                       {point}
                     </li>
                   ))}
@@ -99,7 +99,7 @@ export default function OkxTrading() {
                 <ul className="space-y-3">
                   {gains.map((gain) => (
                     <li key={gain} className="flex gap-3 items-start text-sm">
-                      <SolarCheckCircleLineDuotone className="size-5 shrink-0 text-zinc-600" />
+                      <SolarCheckCircleLinear className="size-5 shrink-0 text-zinc-600" />
                       {gain}
                     </li>
                   ))}

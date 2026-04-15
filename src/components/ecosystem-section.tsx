@@ -1,10 +1,10 @@
 import { useState, useCallback } from "react";
 import { ecosystemSkills } from "../data/ecosystem-skills";
-import SolarGlobalBoldDuotone from "~icons/solar/global-bold-duotone";
-import SolarArrowRightUpBoldDuotone from "~icons/solar/arrow-right-up-bold-duotone";
-import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
-import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
-import SolarStarBoldDuotone from "~icons/solar/star-bold-duotone";
+import SolarGlobalLinear from "~icons/solar/global-linear";
+import SolarArrowRightUpLinear from "~icons/solar/arrow-right-up-linear";
+import SolarCopyLinear from "~icons/solar/copy-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
+import SolarStarLinear from "~icons/solar/star-linear";
 import { Tooltip } from "@heroui/react";
 import InstallCommand from "./shared/install-command";
 
@@ -49,7 +49,7 @@ function SkillCard({
           </span>
           <h3 className="text-lg mt-1 mb-2">{name}</h3>
         </div>
-        <SolarArrowRightUpBoldDuotone className="size-5 text-zinc-400 group-hover:text-zinc-700 transition-colors shrink-0 mt-1" />
+        <SolarArrowRightUpLinear className="size-5 text-zinc-400 group-hover:text-zinc-700 transition-colors shrink-0 mt-1" />
       </div>
       <p className="text-sm text-zinc-600 mb-3">{description}</p>
       <Tooltip delay={0}>
@@ -64,9 +64,9 @@ function SkillCard({
               </code>
               <div>
                 {copied ? (
-                  <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
+                  <SolarCheckCircleLinear className="size-4 text-zinc-200" />
                 ) : (
-                  <SolarCopyLineDuotone className="size-4 text-zinc-400" />
+                  <SolarCopyLinear className="size-4 text-zinc-400" />
                 )}
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function EcosystemSection() {
       <div className="inner">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
           <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit">
-            <SolarGlobalBoldDuotone className="text-zinc-500" />
+            <SolarGlobalLinear className="text-zinc-500" />
             {ecosystemSkills.length + 1} Skills in the Ecosystem
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
@@ -100,7 +100,7 @@ export default function EcosystemSection() {
 
         <div className="border p-6 rounded-xl sm:col-span-2 lg:col-span-3 mt-8">
           <div className="flex items-start gap-2 mb-3">
-            <SolarStarBoldDuotone className="size-5 mt-0.5" />
+            <SolarStarLinear className="size-5 mt-0.5" />
             <span className="text-sm font-medium">Featured</span>
           </div>
           <h3 className="text-xl font-medium mb-2">okx-ecosystem-discovery</h3>

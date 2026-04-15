@@ -1,6 +1,6 @@
 import { ScrollShadow, Tabs } from "@heroui/react";
-import SolarFileLineDuotone from "~icons/solar/file-line-duotone";
-import SolarCodeFileLineDuotone from "~icons/solar/code-file-line-duotone";
+import SolarFileLinear from "~icons/solar/file-linear";
+import SolarCodeFileLinear from "~icons/solar/code-file-linear";
 import FilePanel from "./file-panel";
 
 export interface FileEntry {
@@ -52,9 +52,9 @@ export default function FileListPanel({ files, ariaLabel }: FileListPanelProps) 
                     ) : (
                       <Tabs.Tab key={file.id} id={file.id}>
                         {file.isCode ? (
-                          <SolarCodeFileLineDuotone className="size-4 mr-1" />
+                          <SolarCodeFileLinear className="size-4 mr-1" />
                         ) : (
-                          <SolarFileLineDuotone className="size-4 mr-1" />
+                          <SolarFileLinear className="size-4 mr-1" />
                         )}
                         {file.filename.split("/").pop()}
                         <Tabs.Indicator className="bg-muted/6 shadow-none" />

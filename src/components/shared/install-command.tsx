@@ -1,7 +1,7 @@
 import { cn } from "@heroui/react";
 import { Tooltip } from "@heroui/react";
-import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
-import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
+import SolarCopyLinear from "~icons/solar/copy-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
 import { useCopy } from "../../hooks/use-copy";
 
 interface InstallCommandProps {
@@ -29,9 +29,9 @@ export default function InstallCommand({ skillName, className }: InstallCommandP
             </code>
             <div>
               {copy.copied ? (
-                <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
+                <SolarCheckCircleLinear className="size-4 text-zinc-200" />
               ) : (
-                <SolarCopyLineDuotone className="size-4 text-zinc-400" />
+                <SolarCopyLinear className="size-4 text-zinc-400" />
               )}
             </div>
           </div>

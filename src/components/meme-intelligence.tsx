@@ -1,10 +1,10 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 import SectionHeader from "./shared/section-header";
-import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
-import SolarUserCheckBoldDuotone from "~icons/solar/user-check-bold-duotone";
-import SolarUsersGroupRoundedBoldDuotone from "~icons/solar/users-group-rounded-bold-duotone";
-import SolarGraphUpBoldDuotone from "~icons/solar/graph-up-bold-duotone";
+import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
+import SolarUserCheckLinear from "~icons/solar/user-check-linear";
+import SolarUsersGroupRoundedLinear from "~icons/solar/users-group-rounded-linear";
+import SolarGraphUpLinear from "~icons/solar/graph-up-linear";
 
 import { memeIntelligenceFiles } from "../data/skill-files";
 
@@ -22,9 +22,9 @@ const tokens = [
 ];
 
 const insights = [
-  { icon: <SolarUserCheckBoldDuotone className="text-zinc-400" />, label: "Dev Verified", value: "3 launches" },
-  { icon: <SolarUsersGroupRoundedBoldDuotone className="text-zinc-400" />, label: "Low Sniping", value: "8% bots" },
-  { icon: <SolarGraphUpBoldDuotone className="text-zinc-400" />, label: "Social Spike", value: "2.3K/hr" },
+  { icon: <SolarUserCheckLinear className="text-zinc-400" />, label: "Dev Verified", value: "3 launches" },
+  { icon: <SolarUsersGroupRoundedLinear className="text-zinc-400" />, label: "Low Sniping", value: "8% bots" },
+  { icon: <SolarGraphUpLinear className="text-zinc-400" />, label: "Social Spike", value: "2.3K/hr" },
 ];
 
 export default function MemeIntelligence() {
@@ -34,7 +34,7 @@ export default function MemeIntelligence() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <SectionHeader
-              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Meme Analysis"
               title="Stop buying rugs, start catching gems"
               description="Most meme tokens are rugs. This skill checks the dev's history, spots snipers early, and shows you exactly where the token is on the bonding curve before you ape in."

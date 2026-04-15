@@ -1,11 +1,11 @@
 import { Button, Tabs, Tooltip } from "@heroui/react";
-import SolarBag4BoldDuotone from "~icons/solar/bag-4-bold-duotone";
-import SolarWadOfMoneyBoldDuotone from "~icons/solar/wad-of-money-bold-duotone";
-import SolarPlanet2BoldDuotone from "~icons/solar/planet-2-bold-duotone";
-import SolarChartBoldDuotone from "~icons/solar/chart-bold-duotone";
-import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
-import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
-import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
+import SolarBagLinear from "~icons/solar/bag-linear";
+import SolarWalletMoneyLinear from "~icons/solar/wallet-money-linear";
+import SolarPlanetLinear from "~icons/solar/planet-linear";
+import SolarChartLinear from "~icons/solar/chart-linear";
+import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
+import SolarCopyLinear from "~icons/solar/copy-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
 import { useCopy } from "../hooks/use-copy";
 
 function InstallTabs() {
@@ -40,7 +40,7 @@ function InstallTabs() {
               </span>
               <Tooltip delay={0}>
                 <Button isIconOnly size="sm" variant="ghost" onClick={promptCopy.copy}>
-                  {promptCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                  {promptCopy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
                 </Button>
                 <Tooltip.Content>
                   <p>{promptCopy.copied ? "Copied" : "Copy"}</p>
@@ -63,7 +63,7 @@ function InstallTabs() {
               </span>
               <Tooltip delay={0}>
                 <Button isIconOnly size="sm" variant="ghost" onClick={flinsCopy.copy}>
-                  {flinsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                  {flinsCopy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
                 </Button>
                 <Tooltip.Content>
                   <p>{flinsCopy.copied ? "Copied" : "Copy"}</p>
@@ -85,7 +85,7 @@ function InstallTabs() {
               </span>
               <Tooltip delay={0}>
                 <Button isIconOnly size="sm" variant="ghost" onClick={skillsCopy.copy}>
-                  {skillsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                  {skillsCopy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
                 </Button>
                 <Tooltip.Content>
                   <p>{skillsCopy.copied ? "Copied" : "Copy"}</p>
@@ -108,7 +108,7 @@ function FeatureCards() {
       <div className="md:rotate-2 md:-translate-y-20">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarWadOfMoneyBoldDuotone className="text-zinc-500" />
+            <SolarWalletMoneyLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">
             Swap with safety built in
@@ -123,7 +123,7 @@ function FeatureCards() {
       <div className="md:-rotate-10">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarBag4BoldDuotone className="text-zinc-500" />
+            <SolarBagLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">Run autonomous trading bots</h3>
           <p>
@@ -136,7 +136,7 @@ function FeatureCards() {
       <div className="md:rotate-6">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarPlanet2BoldDuotone className="text-zinc-500" />
+            <SolarPlanetLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">
             Stake, lend, and provide liquidity
@@ -151,7 +151,7 @@ function FeatureCards() {
       <div className="md:-rotate-4 md:-translate-y-10">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarChartBoldDuotone className="text-zinc-500" />
+            <SolarChartLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">Research before you trade</h3>
           <p>
@@ -170,7 +170,7 @@ export default function HeroSection() {
       <div className="inner">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
           <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit">
-            <SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />
+            <SolarArchiveDownLinear className="text-zinc-500" />
             Installed 100+ times
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">

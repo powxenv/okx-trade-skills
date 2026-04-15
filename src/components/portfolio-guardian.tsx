@@ -1,29 +1,29 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 import SectionHeader from "./shared/section-header";
-import SolarShieldCheckBoldDuotone from "~icons/solar/shield-check-bold-duotone";
-import SolarChartBoldDuotone from "~icons/solar/chart-bold-duotone";
-import SolarBellBoldDuotone from "~icons/solar/bell-bold-duotone";
-import SolarLockKeyholeBoldDuotone from "~icons/solar/lock-keyhole-bold-duotone";
-import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
-import SolarDangerCircleBoldDuotone from "~icons/solar/danger-circle-bold-duotone";
-import SolarRefreshCircleBoldDuotone from "~icons/solar/refresh-circle-bold-duotone";
-import SolarCheckCircleBoldDuotone from "~icons/solar/check-circle-bold-duotone";
+import SolarShieldCheckLinear from "~icons/solar/shield-check-linear";
+import SolarChartLinear from "~icons/solar/chart-linear";
+import SolarBellLinear from "~icons/solar/bell-linear";
+import SolarLockLinear from "~icons/solar/lock-linear";
+import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
+import SolarDangerCircleLinear from "~icons/solar/danger-circle-linear";
+import SolarRefreshCircleLinear from "~icons/solar/refresh-circle-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
 
 import { portfolioGuardianFiles } from "../data/skill-files";
 
 const metrics = [
-  { icon: <SolarShieldCheckBoldDuotone className="text-zinc-500" />, label: "Stop-Loss", value: "Auto 15%", detail: "Trigger active" },
-  { icon: <SolarChartBoldDuotone className="text-zinc-500" />, label: "IL Tracking", value: "-$42.30", detail: "2 positions" },
-  { icon: <SolarBellBoldDuotone className="text-zinc-500" />, label: "Alerts", value: "3 Active", detail: "1 new today" },
-  { icon: <SolarLockKeyholeBoldDuotone className="text-zinc-500" />, label: "Approvals", value: "2 Revoke", detail: "High risk" },
+  { icon: <SolarShieldCheckLinear className="text-zinc-500" />, label: "Stop-Loss", value: "Auto 15%", detail: "Trigger active" },
+  { icon: <SolarChartLinear className="text-zinc-500" />, label: "IL Tracking", value: "-$42.30", detail: "2 positions" },
+  { icon: <SolarBellLinear className="text-zinc-500" />, label: "Alerts", value: "3 Active", detail: "1 new today" },
+  { icon: <SolarLockLinear className="text-zinc-500" />, label: "Approvals", value: "2 Revoke", detail: "High risk" },
 ];
 
 const alerts = [
-  { icon: <SolarDangerCircleBoldDuotone className="text-zinc-500" />, title: "Price Alert", msg: "ETH dropped 5% below $2,800", time: "2m ago", status: "warning" },
-  { icon: <SolarRefreshCircleBoldDuotone className="text-zinc-500" />, title: "IL Warning", msg: "UNI-USDC at -8% threshold", time: "1h ago", status: "info" },
-  { icon: <SolarCheckCircleBoldDuotone className="text-zinc-500" />, title: "Stop-Loss Hit", msg: "Sold 500 USDC at trigger", time: "4h ago", status: "success" },
-  { icon: <SolarShieldCheckBoldDuotone className="text-zinc-500" />, title: "Approval Revoked", msg: "Removed suspicious contract approval", time: "6h ago", status: "success" },
+  { icon: <SolarDangerCircleLinear className="text-zinc-500" />, title: "Price Alert", msg: "ETH dropped 5% below $2,800", time: "2m ago", status: "warning" },
+  { icon: <SolarRefreshCircleLinear className="text-zinc-500" />, title: "IL Warning", msg: "UNI-USDC at -8% threshold", time: "1h ago", status: "info" },
+  { icon: <SolarCheckCircleLinear className="text-zinc-500" />, title: "Stop-Loss Hit", msg: "Sold 500 USDC at trigger", time: "4h ago", status: "success" },
+  { icon: <SolarShieldCheckLinear className="text-zinc-500" />, title: "Approval Revoked", msg: "Removed suspicious contract approval", time: "6h ago", status: "success" },
 ];
 
 export default function PortfolioGuardian() {
@@ -33,7 +33,7 @@ export default function PortfolioGuardian() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="flex items-center gap-2 mb-6">
-              <SolarBellBoldDuotone className="size-4 text-zinc-400" />
+              <SolarBellLinear className="size-4 text-zinc-400" />
               <span className="text-sm text-zinc-500">Recent Activity</span>
             </div>
 
@@ -63,7 +63,7 @@ export default function PortfolioGuardian() {
 
           <div className="order-1 lg:order-2">
             <SectionHeader
-              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Risk Protection"
               title="Your portfolio watched while you sleep"
               description="Stop checking prices every 5 minutes. Set stop-loss triggers, track impermanent loss, and get pinged when something actually needs your attention."

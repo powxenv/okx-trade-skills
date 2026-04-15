@@ -1,29 +1,29 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
 import SectionHeader from "./shared/section-header";
-import SolarSortFromTopToBottomBoldDuotone from "~icons/solar/sort-from-top-to-bottom-bold-duotone";
-import SolarUsersGroupRoundedBoldDuotone from "~icons/solar/users-group-rounded-bold-duotone";
-import SolarCardReciveBoldDuotone from "~icons/solar/card-recive-bold-duotone";
-import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
-import SolarConfettiBoldDuotone from "~icons/solar/confetti-bold-duotone";
+import SolarSortFromTopToBottomLinear from "~icons/solar/sort-from-top-to-bottom-linear";
+import SolarUsersGroupRoundedLinear from "~icons/solar/users-group-rounded-linear";
+import SolarCardReciveLinear from "~icons/solar/card-recive-linear";
+import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
+import SolarConfettiLinear from "~icons/solar/confetti-linear";
 
 import { uniswapFiles } from "../data/skill-files";
 
 const features = [
   {
-    icon: <SolarSortFromTopToBottomBoldDuotone className="text-zinc-500" />,
+    icon: <SolarSortFromTopToBottomLinear className="text-zinc-500" />,
     title: "Direct Contract Access",
     desc: "Skip the frontend. Talk to pools directly through your agent with zero UI friction.",
     highlight: "V3 and V4 Ready",
   },
   {
-    icon: <SolarUsersGroupRoundedBoldDuotone className="text-zinc-500" />,
+    icon: <SolarUsersGroupRoundedLinear className="text-zinc-500" />,
     title: "Concentrated Liquidity",
     desc: "Manage LP positions with custom tick ranges. Auto-rebalance when price moves out of bounds.",
     highlight: "Auto Rebalance",
   },
   {
-    icon: <SolarCardReciveBoldDuotone className="text-zinc-500" />,
+    icon: <SolarCardReciveLinear className="text-zinc-500" />,
     title: "x402 Payments",
     desc: "Pay for API calls using the tokens you're trading. Your agent funds itself on X Layer.",
     highlight: "Zero Gas Layer",
@@ -63,7 +63,7 @@ export default function Uniswap() {
 
           <div className="order-1 lg:order-2">
             <SectionHeader
-              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Protocol Integration"
               title="Uniswap, straight from the terminal"
               description="Your agent can swap, add liquidity, and manage positions on Uniswap without ever opening a browser."
@@ -71,7 +71,7 @@ export default function Uniswap() {
 
             <div className="border rounded-xl p-5 bg-zinc-50 mb-6">
               <div className="flex items-center gap-2 mb-4">
-                <SolarConfettiBoldDuotone className="size-4 text-zinc-400" />
+                <SolarConfettiLinear className="size-4 text-zinc-400" />
                 <span className="text-sm font-medium">Live Protocol Data</span>
                 <span className="text-sm text-zinc-600 ml-auto">Updated in real time</span>
               </div>

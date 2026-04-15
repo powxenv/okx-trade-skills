@@ -1,11 +1,11 @@
 import { Button, Tabs, Tooltip } from "@heroui/react";
-import SolarShieldKeyholeBoldDuotone from "~icons/solar/shield-keyhole-bold-duotone";
-import SolarLockKeyholeBoldDuotone from "~icons/solar/lock-keyhole-bold-duotone";
-import SolarUsersGroupTwoRoundedBoldDuotone from "~icons/solar/users-group-two-rounded-bold-duotone";
-import SolarRefreshCircleBoldDuotone from "~icons/solar/refresh-circle-bold-duotone";
-import SolarRocket2BoldDuotone from "~icons/solar/rocket-2-bold-duotone";
-import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
-import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
+import SolarShieldLinear from "~icons/solar/shield-linear";
+import SolarLockLinear from "~icons/solar/lock-linear";
+import SolarUsersGroupTwoRoundedLinear from "~icons/solar/users-group-two-rounded-linear";
+import SolarRefreshCircleLinear from "~icons/solar/refresh-circle-linear";
+import SolarRocketLinear from "~icons/solar/rocket-linear";
+import SolarCopyLinear from "~icons/solar/copy-linear";
+import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
 import { useCopy } from "../hooks/use-copy";
 
 function InstallTabs() {
@@ -40,7 +40,7 @@ function InstallTabs() {
               </span>
               <Tooltip delay={0}>
                 <Button isIconOnly size="sm" variant="ghost" onClick={promptCopy.copy}>
-                  {promptCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                  {promptCopy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
                 </Button>
                 <Tooltip.Content>
                   <p>{promptCopy.copied ? "Copied" : "Copy"}</p>
@@ -63,7 +63,7 @@ function InstallTabs() {
               </span>
               <Tooltip delay={0}>
                 <Button isIconOnly size="sm" variant="ghost" onClick={flinsCopy.copy}>
-                  {flinsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                  {flinsCopy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
                 </Button>
                 <Tooltip.Content>
                   <p>{flinsCopy.copied ? "Copied" : "Copy"}</p>
@@ -85,7 +85,7 @@ function InstallTabs() {
               </span>
               <Tooltip delay={0}>
                 <Button isIconOnly size="sm" variant="ghost" onClick={skillsCopy.copy}>
-                  {skillsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
+                  {skillsCopy.copied ? <SolarCheckCircleLinear /> : <SolarCopyLinear />}
                 </Button>
                 <Tooltip.Content>
                   <p>{skillsCopy.copied ? "Copied" : "Copy"}</p>
@@ -108,7 +108,7 @@ function TrustCards() {
       <div className="md:rotate-1">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarShieldKeyholeBoldDuotone className="text-zinc-500" />
+            <SolarShieldLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">Non-custodial by design</h3>
           <p>
@@ -121,7 +121,7 @@ function TrustCards() {
       <div className="md:-rotate-2">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarLockKeyholeBoldDuotone className="text-zinc-500" />
+            <SolarLockLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">Built-in safety rails</h3>
           <p>
@@ -134,7 +134,7 @@ function TrustCards() {
       <div className="md:rotate-2">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarUsersGroupTwoRoundedBoldDuotone className="text-zinc-500" />
+            <SolarUsersGroupTwoRoundedLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">Battle-tested by traders</h3>
           <p>
@@ -147,7 +147,7 @@ function TrustCards() {
       <div className="md:-rotate-1">
         <div className="border p-6 rounded-xl bg-white shadow-xl shadow-black/6">
           <div className="size-10 border flex justify-center items-center rounded-lg">
-            <SolarRefreshCircleBoldDuotone className="text-zinc-500" />
+            <SolarRefreshCircleLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">Always up to date</h3>
           <p>
@@ -167,7 +167,7 @@ export default function CtaSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
             <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit">
-              <SolarRocket2BoldDuotone className="text-zinc-500" />
+              <SolarRocketLinear className="text-zinc-500" />
               Get started in seconds
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
