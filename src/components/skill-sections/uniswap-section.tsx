@@ -1,12 +1,13 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
+import SectionHeader from "./shared/section-header";
 import SolarSortFromTopToBottomBoldDuotone from "~icons/solar/sort-from-top-to-bottom-bold-duotone";
 import SolarUsersGroupRoundedBoldDuotone from "~icons/solar/users-group-rounded-bold-duotone";
 import SolarCardReciveBoldDuotone from "~icons/solar/card-recive-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 import SolarConfettiBoldDuotone from "~icons/solar/confetti-bold-duotone";
 
-import { files as uniswapFiles } from "../uniswap-panel";
+import { uniswapFiles } from "../../data/skill-files";
 
 const features = [
   {
@@ -62,19 +63,15 @@ export default function UniswapSection() {
 
           {/* Right: Header + Live Metrics */}
           <div className="order-1 lg:order-2">
-            <div className="border pl-2 pr-4 py-1 gap-1 items-center rounded-lg text-sm inline-flex mb-4">
-              <SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />
-              Protocol Integration
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
-              Uniswap Direct
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-600 max-w-md mb-8">
-              Contract-level integration for Uniswap V3/V4. Manage concentrated liquidity, execute swaps, and handle x402 payments—all without leaving your agent.
-            </p>
+            <SectionHeader
+              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeText="Protocol Integration"
+              title="Uniswap Direct"
+              description="Contract-level integration for Uniswap V3/V4. Manage concentrated liquidity, execute swaps, and handle x402 payments—all without leaving your agent."
+            />
 
             {/* Live Metrics */}
-            <div className="border rounded-xl p-5 bg-zinc-50 mb-8">
+            <div className="border rounded-xl p-5 bg-zinc-50 mb-6">
               <div className="flex items-center gap-2 mb-4">
                 <SolarConfettiBoldDuotone className="size-4 text-zinc-400" />
                 <span className="text-sm font-medium">Live Protocol Data</span>

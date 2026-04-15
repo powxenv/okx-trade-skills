@@ -1,9 +1,10 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
+import SectionHeader from "./shared/section-header";
 import SolarCodeBoldDuotone from "~icons/solar/code-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 
-import { files as uniswapDevFiles } from "../uniswap-dev-panel";
+import { uniswapDevFiles } from "../../data/skill-files";
 
 const topics = ["v4 Hooks", "CCA", "Swap Planning", "Liquidity", "Trading API", "SDK", "viem", "x402"];
 
@@ -61,16 +62,12 @@ export default function UniswapDevSection() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="border pl-2 pr-4 py-1 gap-1 items-center rounded-lg text-sm inline-flex mb-4">
-              <SolarCodeBoldDuotone className="text-zinc-500" />
-              Development
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
-              Uniswap Developer Suite
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-600 max-w-md mb-6">
-              Generate and audit v4 hooks, configure CCAs, plan swaps with deep links, integrate Trading API and Universal Router, and build with viem.
-            </p>
+            <SectionHeader
+              badgeIcon={<SolarCodeBoldDuotone className="text-zinc-500" />}
+              badgeText="Development"
+              title="Uniswap Developer Suite"
+              description="Generate and audit v4 hooks, configure CCAs, plan swaps with deep links, integrate Trading API and Universal Router, and build with viem."
+            />
             <div className="flex gap-2 flex-wrap mb-8">
               {topics.map((topic) => (
                 <div key={topic} className="border rounded-full px-3 py-1 text-sm text-zinc-600">

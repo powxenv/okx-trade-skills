@@ -2,8 +2,8 @@
 
 import { Button, Modal } from "@heroui/react";
 import SolarDocumentsBoldDuotone from "~icons/solar/documents-bold-duotone";
-import type { FileEntry } from "../../file-list-panel";
-import FileListPanel from "../../file-list-panel";
+import type { FileEntry } from "./file-list-panel";
+import FileListPanel from "./file-list-panel";
 
 interface ViewFilesButtonProps {
   files: FileEntry[];

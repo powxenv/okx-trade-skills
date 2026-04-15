@@ -7,7 +7,7 @@ import SolarShieldCheckBoldDuotone from "~icons/solar/shield-check-bold-duotone"
 import InstallCommand from "./skill-sections/shared/install-command";
 import ViewFilesButton from "./skill-sections/shared/view-files-button";
 
-import { files as tradingFiles } from "./trading-panel";
+import { tradingFiles } from "../data/skill-files";
 
 const painPoints = [
   "Open 5 tabs just to figure out if a token is worth buying",

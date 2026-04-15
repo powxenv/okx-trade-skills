@@ -1,11 +1,12 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
+import SectionHeader from "./shared/section-header";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 import SolarUserCheckBoldDuotone from "~icons/solar/user-check-bold-duotone";
 import SolarUsersGroupRoundedBoldDuotone from "~icons/solar/users-group-rounded-bold-duotone";
 import SolarGraphUpBoldDuotone from "~icons/solar/graph-up-bold-duotone";
 
-import { files as memeIntelligenceFiles } from "../meme-intelligence-panel";
+import { memeIntelligenceFiles } from "../../data/skill-files";
 
 const analyses = [
   { label: "Dev Reputation", value: "Clean", status: "✓" },
@@ -32,16 +33,12 @@ export default function MemeIntelligenceSection() {
       <div className="inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="border pl-2 pr-4 py-1 gap-1 items-center rounded-lg text-sm inline-flex mb-4">
-              <SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />
-              Meme Analysis
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
-              Meme Intelligence
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-600 max-w-md mb-6">
-              Deep meme token analysis with developer reputation scoring, sniper/bundler detection, bonding curve analysis, and multi-factor safety scoring.
-            </p>
+            <SectionHeader
+              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeText="Meme Analysis"
+              title="Meme Intelligence"
+              description="Deep meme token analysis with developer reputation scoring, sniper/bundler detection, bonding curve analysis, and multi-factor safety scoring."
+            />
 
             <InstallCommand skillName="okx-meme-intelligence" />
             <ViewFilesButton

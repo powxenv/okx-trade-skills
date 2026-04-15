@@ -1,12 +1,13 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
+import SectionHeader from "./shared/section-header";
 import SolarEyeBoldDuotone from "~icons/solar/eye-bold-duotone";
 import SolarBoltBoldDuotone from "~icons/solar/bolt-bold-duotone";
 import SolarRocket2BoldDuotone from "~icons/solar/rocket-2-bold-duotone";
 import SolarArrowDownBoldDuotone from "~icons/solar/arrow-down-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 
-import { files as xlayerFiles } from "../xlayer-panel";
+import { xlayerFiles } from "../../data/skill-files";
 
 const steps = [
   { num: "01", icon: <SolarEyeBoldDuotone className="text-zinc-500" />, title: "Monitor", desc: "Price feeds, whale tracking, arbitrage" },
@@ -20,18 +21,14 @@ export default function XlayerAgentSection() {
       <div className="inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
           <div>
-            <div className="border pl-2 pr-4 py-1 gap-1 items-center rounded-lg text-sm inline-flex mb-4">
-              <SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />
-              Autonomous Agents
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
-              X Layer Agent
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-600 max-w-md">
-              Build autonomous agents that trade, earn, and compete on X Layer's zero-gas L2. Self-funding via x402, infinite loops.
-            </p>
+            <SectionHeader
+              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeText="Autonomous Agents"
+              title="X Layer Agent"
+              description="Build autonomous agents that trade, earn, and compete on X Layer's zero-gas L2. Self-funding via x402, infinite loops."
+            />
 
-            <div className="grid grid-cols-3 gap-6 mt-8">
+            <div className="grid grid-cols-3 gap-6">
               <div>
                 <div className="text-2xl -tracking-wider font-medium">Zero</div>
                 <div className="text-sm text-zinc-500">Gas</div>

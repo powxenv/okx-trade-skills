@@ -1,5 +1,6 @@
 import InstallCommand from "./shared/install-command";
 import ViewFilesButton from "./shared/view-files-button";
+import SectionHeader from "./shared/section-header";
 import SolarShieldCheckBoldDuotone from "~icons/solar/shield-check-bold-duotone";
 import SolarChartBoldDuotone from "~icons/solar/chart-bold-duotone";
 import SolarBellBoldDuotone from "~icons/solar/bell-bold-duotone";
@@ -9,7 +10,7 @@ import SolarDangerCircleBoldDuotone from "~icons/solar/danger-circle-bold-duoton
 import SolarRefreshCircleBoldDuotone from "~icons/solar/refresh-circle-bold-duotone";
 import SolarCheckCircleBoldDuotone from "~icons/solar/check-circle-bold-duotone";
 
-import { files as portfolioGuardianFiles } from "../portfolio-guardian-panel";
+import { portfolioGuardianFiles } from "../../data/skill-files";
 
 const metrics = [
   { icon: <SolarShieldCheckBoldDuotone className="text-zinc-500" />, label: "Stop-Loss", value: "Auto 15%", detail: "Trigger active" },
@@ -61,16 +62,12 @@ export default function PortfolioGuardianSection() {
           </div>
 
           <div className="order-1 lg:order-2">
-            <div className="border pl-2 pr-4 py-1 gap-1 items-center rounded-lg text-sm inline-flex mb-4">
-              <SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />
-              Risk Protection
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4">
-              Portfolio Guardian
-            </h2>
-            <p className="text-base sm:text-lg text-zinc-600 max-w-md mb-8">
-              Real-time wallet monitoring with stop-loss automation, impermanent loss tracking, approval auditing, and price alerts.
-            </p>
+            <SectionHeader
+              badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
+              badgeText="Risk Protection"
+              title="Portfolio Guardian"
+              description="Real-time wallet monitoring with stop-loss automation, impermanent loss tracking, approval auditing, and price alerts."
+            />
 
             <div className="grid grid-cols-2 gap-3">
               {metrics.map((m, idx) => (
