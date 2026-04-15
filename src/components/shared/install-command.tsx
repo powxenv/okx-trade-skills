@@ -15,7 +15,7 @@ export default function InstallCommand({ skillName, className }: InstallCommandP
 
   return (
     <Tooltip delay={0}>
-      <Tooltip.Trigger aria-label="Copy install command">
+      <Tooltip.Trigger aria-label="Copy install command" className="w-full">
         <button
           className={cn(
             "border rounded-xl p-1 w-full max-w-2xl mx-auto block cursor-pointer",
