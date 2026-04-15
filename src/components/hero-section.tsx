@@ -125,9 +125,9 @@ function FeatureCards() {
           <div className="size-10 border flex justify-center items-center rounded-lg">
             <SolarBagLinear className="text-zinc-500" />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Run autonomous trading bots</h3>
+          <h3 className="text-lg mt-1 mb-2">Deploy autonomous agents</h3>
           <p>
-            Deploy agents that follow smart money, rebalance portfolios,
+            Agents that trade on X Layer for near-zero gas, follow smart money,
             and compound yields. Manual, semi-auto, or full-auto.
           </p>
         </div>
@@ -139,11 +139,11 @@ function FeatureCards() {
             <SolarPlanetLinear className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">
-            Stake, lend, and provide liquidity
+            Protect your portfolio
           </h3>
           <p>
-            Access DeFi across chains. Deposit into yield farms,
-            manage V3 LP positions, and auto-compound rewards.
+            Auto stop-loss, impermanent loss tracking, approval auditing, and
+            whale alerts. Your agent watches while you sleep.
           </p>
         </div>
       </div>
@@ -153,10 +153,10 @@ function FeatureCards() {
           <div className="size-10 border flex justify-center items-center rounded-lg">
             <SolarChartLinear className="text-zinc-500" />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Research before you trade</h3>
+          <h3 className="text-lg mt-1 mb-2">Catch gems, avoid rugs</h3>
           <p>
-            Check token metrics, track whale wallets, monitor trending memes,
-            and get real-time PnL.
+            Meme intelligence scores devs, spots snipers, and analyzes bonding
+            curves. Trade pump.fun with confidence.
           </p>
         </div>
       </div>
@@ -174,12 +174,12 @@ export default function HeroSection() {
             Installed 100+ times
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
-            Trade onchain with agents that actually work
+            An onchain skill suite for AI agents
           </h1>
           <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
-            A skill library for autonomous trading. Research tokens, scan for
-            honeypots, execute swaps, track smart money, and run DeFi strategies
-            across EVM chains and Solana.
+            Give your AI agent the skills to trade, protect, and analyze onchain.
+            Execute swaps, monitor portfolios, catch meme gems, deploy strategies,
+            and automate risk management—all with built-in security.
           </p>
         </div>
 

@@ -65,8 +65,8 @@ export default function UniswapDev() {
             <SectionHeader
               badgeIcon={<SolarCodeLinear className="text-zinc-500" />}
               badgeText="Development"
-              title="Ship faster with Uniswap v4 hooks"
-              description="Generate boilerplate, audit your hooks, plan swaps with deep links, and integrate the Trading API. Your agent writes the code so you don't have to."
+              title="Your agent writes production-ready Uniswap code"
+              description="Generate v4 hook boilerplate, audit hooks for security vulnerabilities, plan swaps with deep links, and integrate the Trading API. Your agent handles the plumbing."
             />
             <div className="flex gap-2 flex-wrap mb-6">
               {topics.map((topic) => (

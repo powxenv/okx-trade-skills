@@ -13,10 +13,10 @@ import SolarCheckCircleLinear from "~icons/solar/check-circle-linear";
 import { portfolioGuardianFiles } from "../data/skill-files";
 
 const metrics = [
-  { icon: <SolarShieldCheckLinear className="text-zinc-500" />, label: "Stop-Loss", value: "Auto 15%", detail: "Trigger active" },
-  { icon: <SolarChartLinear className="text-zinc-500" />, label: "IL Tracking", value: "-$42.30", detail: "2 positions" },
-  { icon: <SolarBellLinear className="text-zinc-500" />, label: "Alerts", value: "3 Active", detail: "1 new today" },
-  { icon: <SolarLockLinear className="text-zinc-500" />, label: "Approvals", value: "2 Revoke", detail: "High risk" },
+  { icon: <SolarShieldCheckLinear className="text-zinc-500" />, label: "Stop-Loss", value: "Auto 15%", detail: "Agent-monitored" },
+  { icon: <SolarChartLinear className="text-zinc-500" />, label: "IL Tracking", value: "-$42.30", detail: "2 LP positions" },
+  { icon: <SolarBellLinear className="text-zinc-500" />, label: "Alerts", value: "3 Active", detail: "Agent-driven" },
+  { icon: <SolarLockLinear className="text-zinc-500" />, label: "Approvals", value: "2 Revoke", detail: "Agent detected" },
 ];
 
 const alerts = [
@@ -65,8 +65,8 @@ export default function PortfolioGuardian() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Risk Protection"
-              title="Your portfolio watched while you sleep"
-              description="Stop checking prices every 5 minutes. Set stop-loss triggers, track impermanent loss, and get pinged when something actually needs your attention."
+              title="Your agent never stops watching your portfolio"
+              description="Your agent monitors stop-loss triggers, tracks impermanent loss, audits token approvals, and alerts you the moment something needs attention. Sleep better knowing your agent is on watch."
             />
 
             <div className="grid grid-cols-2 gap-3 mb-6">

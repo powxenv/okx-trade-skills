@@ -36,8 +36,8 @@ export default function MemeIntelligence() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Meme Analysis"
-              title="Stop buying rugs, start catching gems"
-              description="Most meme tokens are rugs. This skill checks the dev's history, spots snipers early, and shows you exactly where the token is on the bonding curve before you ape in."
+              title="Your agent spots rugs before you ape"
+              description="Most meme tokens are rugs. Your agent analyzes dev reputation, detects sniper activity early, and shows you exactly where the token sits on the bonding curve. Trade pump.fun with confidence."
             />
 
             <InstallCommand skillName="okx-meme-intelligence" />

@@ -11,9 +11,9 @@ import SolarArchiveDownLinear from "~icons/solar/archive-down-linear";
 import { xlayerFiles } from "../data/skill-files";
 
 const steps = [
-  { num: "01", icon: <SolarEyeLinear className="text-zinc-500" />, title: "Watch", desc: "Track prices, whales, and arb opportunities across the chain" },
-  { num: "02", icon: <SolarBoltLinear className="text-zinc-500" />, title: "Decide", desc: "Run your strategy, check risk, optimize for gas" },
-  { num: "03", icon: <SolarRocketLinear className="text-zinc-500" />, title: "Execute", desc: "Zero-gas txs, auto-compound, pay with x402" },
+  { num: "01", icon: <SolarEyeLinear className="text-zinc-500" />, title: "Watch", desc: "Your agent monitors prices, whales, and arb opportunities across the chain" },
+  { num: "02", icon: <SolarBoltLinear className="text-zinc-500" />, title: "Decide", desc: "Your agent runs strategies, checks risk limits, and optimizes for gas" },
+  { num: "03", icon: <SolarRocketLinear className="text-zinc-500" />, title: "Execute", desc: "Zero-gas transactions, auto-compound, and x402 self-payment" },
 ];
 
 export default function XlayerAgent() {
@@ -25,8 +25,8 @@ export default function XlayerAgent() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Autonomous Agents"
-              title="Agents that run forever on zero gas"
-              description="X Layer has no gas fees. Your agent can trade, compound, and pay for itself using x402 without you ever topping up."
+              title="Give your agent a chain that never sleeps"
+              description="X Layer's near-zero gas means your agent can trade, compound, and pay for itself using x402. No more topping up—your agent sustains its own operations."
             />
 
             <div className="grid grid-cols-3 gap-6 mb-6">

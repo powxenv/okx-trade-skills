@@ -90,11 +90,11 @@ export default function EcosystemSection() {
             {ecosystemSkills.length + 1} Skills in the Ecosystem
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
-            Add more skills from the community
+            Expand your agent's capabilities
           </h2>
           <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
-            Pull in skills from OKX OnchainOS, Uniswap AI, and other builders.
-            One command installs them all.
+            Your agent can discover and install skills from OKX OnchainOS,
+            Uniswap AI, and the broader ecosystem. One command adds them all.
           </p>
         </div>
 
@@ -105,7 +105,7 @@ export default function EcosystemSection() {
           </div>
           <h3 className="text-xl font-medium mb-2">okx-ecosystem-discovery</h3>
           <p className="text-sm text-zinc-600 mb-4">
-            Browse and search skills from the OKX ecosystem. Find skills for DeFi, swapping, security, LP management, and get help choosing the right one.
+            Your agent browses and searches skills from the OKX ecosystem. Discover DeFi protocols, swapping tools, security modules, LP management, and get help choosing the right skill for the job.
           </p>
           <InstallCommand skillName="okx-ecosystem-discovery" className="mt-0 mx-0" />
         </div>

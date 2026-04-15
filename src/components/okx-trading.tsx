@@ -17,10 +17,10 @@ const painPoints = [
 ];
 
 const gains = [
-  "One prompt covers research, safety checks, and the trade itself",
-  "Honeypot and rug-pull scans run automatically before each swap",
+  "Your agent handles research, safety checks, and execution in one go",
+  "Honeypot and rug-pull scans run automatically before every swap",
   "Routes through 500+ DEX sources to find the best price, every time",
-  "Set it and let the agent rebalance and compound for you around the clock",
+  "Your agent rebalances and compounds positions around the clock",
 ];
 
 const stats = [
@@ -45,12 +45,12 @@ export default function OkxTrading() {
               Core Trading
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
-              You already have the agent. Now give it the skills.
+              Give your agent the full onchain toolkit
             </h2>
             <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
-              Instead of juggling a dozen tools, your agent can research, scan,
-              swap, and manage positions all on its own. You just say what you
-              want.
+              Your agent already knows how to reason. Now give it the tools to
+              act. Research tokens, scan for rugs, execute swaps, and manage
+              positions across 500+ DEXes and 20+ chains.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-6">

@@ -171,11 +171,11 @@ export default function CtaSection() {
               Get started in seconds
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
-              Start trading onchain today
+              Give your agent onchain superpowers
             </h2>
             <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
-              Copy the command below and you're seconds away from autonomous
-              onchain trading.
+              One command equips your AI agent with trading, protection, and
+              analysis skills. Let it handle the onchain heavy lifting.
             </p>
 
             <InstallTabs />

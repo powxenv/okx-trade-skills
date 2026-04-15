@@ -13,19 +13,19 @@ const features = [
   {
     icon: <SolarSortFromTopToBottomLinear className="text-zinc-500" />,
     title: "Direct Contract Access",
-    desc: "Skip the frontend. Talk to pools directly through your agent with zero UI friction.",
+    desc: "Your agent skips the frontend and talks to pools directly. Zero UI friction, faster execution, and no middleman.",
     highlight: "V3 and V4 Ready",
   },
   {
     icon: <SolarUsersGroupRoundedLinear className="text-zinc-500" />,
     title: "Concentrated Liquidity",
-    desc: "Manage LP positions with custom tick ranges. Auto-rebalance when price moves out of bounds.",
+    desc: "Your agent manages LP positions with custom tick ranges and auto-rebalances when price moves out of bounds.",
     highlight: "Auto Rebalance",
   },
   {
     icon: <SolarCardReciveLinear className="text-zinc-500" />,
     title: "x402 Payments",
-    desc: "Pay for API calls using the tokens you're trading. Your agent funds itself on X Layer.",
+    desc: "Your agent pays for API calls using the tokens it's trading. Self-funding operations on X Layer.",
     highlight: "Zero Gas Layer",
   },
 ];
@@ -65,8 +65,8 @@ export default function Uniswap() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownLinear className="text-zinc-500" />}
               badgeText="Protocol Integration"
-              title="Uniswap, straight from the terminal"
-              description="Your agent can swap, add liquidity, and manage positions on Uniswap without ever opening a browser."
+              title="Your agent talks directly to Uniswap"
+              description="Your agent swaps tokens, manages LP positions, and routes through V3 pools—all without touching a browser. Direct contract access means faster execution and lower slippage."
             />
 
             <div className="border rounded-xl p-5 bg-zinc-50 mb-6">
