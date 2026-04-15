@@ -4,6 +4,9 @@ import TradingPanel from "./trading-panel";
 import UniswapPanel from "./uniswap-panel";
 import XlayerPanel from "./xlayer-panel";
 import EcosystemPanel from "./ecosystem-panel";
+import UniswapDevPanel from "./uniswap-dev-panel";
+import PortfolioGuardianPanel from "./portfolio-guardian-panel";
+import MemeIntelligencePanel from "./meme-intelligence-panel";
 
 export default function GuidesSection() {
   return (
@@ -11,7 +14,7 @@ export default function GuidesSection() {
       <div className="inner">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
           <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm">
-            <SolarDocumentsBoldDuotone className="text-zinc-500" /> 60+ Guides
+            <SolarDocumentsBoldDuotone className="text-zinc-500" /> 100+ Guides
             For Your Agents
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
@@ -25,7 +28,7 @@ export default function GuidesSection() {
 
         <div className="mt-8">
           <Tabs>
-            <Tabs.ListContainer className="w-full max-w-lg mx-auto">
+            <Tabs.ListContainer className="w-full max-w-2xl mx-auto">
               <Tabs.List aria-label="Skill tabs">
                 <Tabs.Tab id="trading">
                   Trading
@@ -41,6 +44,18 @@ export default function GuidesSection() {
                 </Tabs.Tab>
                 <Tabs.Tab id="ecosystem">
                   Ecosystem
+                  <Tabs.Indicator />
+                </Tabs.Tab>
+                <Tabs.Tab id="uniswap-dev">
+                  Uniswap Dev
+                  <Tabs.Indicator />
+                </Tabs.Tab>
+                <Tabs.Tab id="portfolio-guardian">
+                  Portfolio Guardian
+                  <Tabs.Indicator />
+                </Tabs.Tab>
+                <Tabs.Tab id="meme-intelligence">
+                  Meme Intel
                   <Tabs.Indicator />
                 </Tabs.Tab>
               </Tabs.List>
@@ -60,6 +75,18 @@ export default function GuidesSection() {
 
             <Tabs.Panel id="ecosystem">
               <EcosystemPanel />
+            </Tabs.Panel>
+
+            <Tabs.Panel id="uniswap-dev">
+              <UniswapDevPanel />
+            </Tabs.Panel>
+
+            <Tabs.Panel id="portfolio-guardian">
+              <PortfolioGuardianPanel />
+            </Tabs.Panel>
+
+            <Tabs.Panel id="meme-intelligence">
+              <MemeIntelligencePanel />
             </Tabs.Panel>
           </Tabs>
 

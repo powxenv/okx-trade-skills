@@ -1,0 +1,3 @@
+display_name: "OKX Portfolio Guardian"
+short_description: "Portfolio risk monitoring and protection - stop-loss automation, approval monitoring, IL tracking, whale alerts, and auto-response rules"
+default_prompt: "Help me protect my portfolio. I want to set up stop-loss monitoring, track approvals, and get alerts for suspicious activity."

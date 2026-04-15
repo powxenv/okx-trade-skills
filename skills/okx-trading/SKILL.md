@@ -372,6 +372,9 @@ Beyond the technical CLI workflows, use these references when the user needs hel
 | Risk: domain detection (DApp phishing) | `references/risk-domain-detection.md` |
 | Risk: approval monitoring | `references/risk-approval-monitoring.md` |
 | Troubleshooting & edge cases | `references/troubleshooting.md` |
+| Token scoring model (0-100) | `references/token-scoring-model.md` |
+| Cross-chain arbitrage detection | `references/cross-chain-arbitrage.md` |
+| Position tracking state schema | `references/position-tracking-schema.md` |
 | WebSocket real-time monitoring | `references/ws-monitoring.md` |
 | Keyword glossary (Chinese) | `references/keyword-glossary.md` |
 | CLI reference: Market & portfolio | `references/cli-reference-market.md` |

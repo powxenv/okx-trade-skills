@@ -1,0 +1,3 @@
+display_name: "OKX Meme Intelligence"
+short_description: "Deep meme token analysis - dev reputation, sniper detection, bonding curves, safety scoring, social signals, and meme trading strategies"
+default_prompt: "Help me analyze a meme token. I want to check the developer reputation, detect snipers, score its safety, and decide whether to trade it."

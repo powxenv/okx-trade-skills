@@ -20,6 +20,9 @@ import tradingRiskManagement from "../../skills/okx-trading/references/risk-mana
 import tradingRiskTokenDetection from "../../skills/okx-trading/references/risk-token-detection.md?raw";
 import tradingRiskTransactionDetection from "../../skills/okx-trading/references/risk-transaction-detection.md?raw";
 import tradingStrategies from "../../skills/okx-trading/references/trading-strategies.md?raw";
+import tradingCrossChainArbitrage from "../../skills/okx-trading/references/cross-chain-arbitrage.md?raw";
+import tradingPositionTracking from "../../skills/okx-trading/references/position-tracking-schema.md?raw";
+import tradingTokenScoring from "../../skills/okx-trading/references/token-scoring-model.md?raw";
 import tradingTroubleshooting from "../../skills/okx-trading/references/troubleshooting.md?raw";
 import tradingUniswapIntegration from "../../skills/okx-trading/references/uniswap-integration.md?raw";
 import tradingWorkflowBuy from "../../skills/okx-trading/references/workflow-buy.md?raw";
@@ -44,6 +47,7 @@ const files: FileEntry[] = [
   { id: "trading-cli-security", filename: "references/cli-reference-security.md", content: tradingCliSecurity },
   { id: "trading-cli-signal", filename: "references/cli-reference-signal.md", content: tradingCliSignal },
   { id: "trading-cli-swap", filename: "references/cli-reference-swap.md", content: tradingCliSwap },
+  { id: "trading-cross-chain", filename: "references/cross-chain-arbitrage.md", content: tradingCrossChainArbitrage },
   { id: "trading-decision-framework", filename: "references/decision-framework.md", content: tradingDecisionFramework },
   { id: "trading-keyword-glossary", filename: "references/keyword-glossary.md", content: tradingKeywordGlossary },
   { id: "trading-market-analysis", filename: "references/market-analysis.md", content: tradingMarketAnalysis },
@@ -62,6 +66,8 @@ const files: FileEntry[] = [
   { id: "trading-workflow-meme", filename: "references/workflow-meme-trading.md", content: tradingWorkflowMeme },
   { id: "trading-workflow-research", filename: "references/workflow-research.md", content: tradingWorkflowResearch },
   { id: "trading-workflow-sell", filename: "references/workflow-sell.md", content: tradingWorkflowSell },
+  { id: "trading-position-tracking", filename: "references/position-tracking-schema.md", content: tradingPositionTracking },
+  { id: "trading-token-scoring", filename: "references/token-scoring-model.md", content: tradingTokenScoring },
   { id: "trading-ws", filename: "references/ws-monitoring.md", content: tradingWsMonitoring },
   { id: "trading-xlayer", filename: "references/xlayer-strategies.md", content: tradingXlayerStrategies },
   { id: "trading-shared-header", filename: "_shared/", isHeader: true, content: "" },

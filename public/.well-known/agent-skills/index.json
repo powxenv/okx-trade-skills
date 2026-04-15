@@ -6,31 +6,55 @@
       "type": "archive",
       "description": "Browse, search, and install skills from the OKX Trade Skills ecosystem. Use when the user wants to: discover available skills; find skills for a specific use case like DeFi, swapping, security, or LP management; see what skills are available from OKX OnchainOS or Uniswap AI; install an individual skill or an entire skill pack; list installed skills; or get help choosing the right skill for their needs. Chinese: 技能发现, 技能安装, 技能搜索, 生态系统, OnchainOS技能, Uniswap技能.",
       "url": "/.well-known/agent-skills/okx-ecosystem-discovery.tar.gz",
-      "digest": "sha256:ddea8d28dd3f14492e9a69be5b80e46e817cbcf0c5e38dfca82599a790109c76",
+      "digest": "sha256:9af28e2c1e30cc00a7b19a1329337d11f2cc7e6ea9dcd4d481851c4c1209fe6f",
       "_contentHash": "3915979acaa369b4c59d55131db65d8ff2a38642d12bca8109d54a175968745e"
+    },
+    {
+      "name": "okx-meme-intelligence",
+      "type": "archive",
+      "description": "Deep meme token analysis and intelligence: developer reputation scoring, sniper/bundler detection, bonding curve analysis, multi-factor safety scoring, social signal correlation, and meme-specific trading strategies. Use when the user wants to: evaluate a meme token before buying; check if a meme launch is legit or a scam; analyze developer history and reputation; detect sniper bots and bundled wallets; understand bonding curve mechanics on pump.fun; score a meme token's safety on a 0-100 scale; correlate social hype with on-chain reality; plan entry/exit for meme token trades; research pump.fun token trenches; avoid rug pulls and honeypots in meme markets. Chinese: 狗狗币分析, 梗币分析, 开发者信誉, 狙击手检测, 捆绑检测, 联合曲线, 安全评分, 社交信号, 打狗策略, 防貔貅, 防归零, pump.fun分析, 梗币安全.",
+      "url": "/.well-known/agent-skills/okx-meme-intelligence.tar.gz",
+      "digest": "sha256:411f2a93753218d88170a07648bf5e1296d3389ed5aa4245fd83288804c8062b",
+      "_contentHash": "4036b9102ef976878f06aa2cb3fb51fc7b30016e0ddc484ad318b980ad5f2db0"
+    },
+    {
+      "name": "okx-portfolio-guardian",
+      "type": "archive",
+      "description": "Portfolio risk monitoring and automated protection skill: real-time wallet monitoring, stop-loss/take-profit automation, impermanent loss tracking, token approval auditing, whale and price alert systems, and configurable auto-response rules for protective actions. Use when the user wants to: monitor their portfolio for risk; set up stop-loss or take-profit triggers; track impermanent loss on LP positions; audit or revoke token approvals; receive real-time price or whale alerts; configure automated protective responses (auto-revoke, auto-unwind, halt trading); assess portfolio health and risk exposure; check for suspicious on-chain activity; manage DeFi position risk. Chinese: 投资组合监控, 止损, 止盈, 无常损失, 授权监控, 风险保护, 自动止损, 鲸鱼追踪, 价格警报, 撤销授权, DeFi风险, 仓位保护.",
+      "url": "/.well-known/agent-skills/okx-portfolio-guardian.tar.gz",
+      "digest": "sha256:173b7d769928fc4a4f8137bf9cd49cbe1a8684a52966c03d69e63b3378ee541c",
+      "_contentHash": "79b109ea604029ea0b57339cb45d744786badafa64dc969562ecd2faba84afc9"
     },
     {
       "name": "okx-trading",
       "type": "archive",
       "description": "Comprehensive on-chain trading skill covering the full lifecycle: token research and analysis, security scanning, market data, smart money signal tracking, DEX swap execution, DeFi yield farming, meme token trenches, portfolio management, wallet operations, and transaction broadcasting. Use when the user wants to: buy, sell, swap, or trade tokens; research tokens before trading; check token safety or honeypot detection; analyze holdings, PnL, or portfolio; track smart money/whale/KOL activity; discover trending or meme tokens; estimate gas or broadcast transactions; earn yield via DeFi staking/lending/pools; manage wallet authentication and balances; or any combination thereof. Chinese: 交易, 买币, 卖币, 兑换, 代币研究, 安全检测, 蜜罐检测, 行情, 盈亏, 持仓分析, 聪明钱, 大户信号, 热门代币, 打狗, DeFi理财, 质押, 流动性, 钱包操作, 广播交易, 签名安全, 授权管理, 链上交易.",
       "url": "/.well-known/agent-skills/okx-trading.tar.gz",
-      "digest": "sha256:14aac1cfcdcdde7de0895a0c95eaa0f6ab697bdc32415da66165265a0bca7b29",
-      "_contentHash": "9de85b32a00bb8332747aabea10949873f6b54a9279a922af07c77aa1d8082e4"
+      "digest": "sha256:cf74a360b34429c2b1838bcbe45c7be9a89eec71e60bf7c9d45f85571e40d75b",
+      "_contentHash": "d542c71b9cb8c43f93e191f59b5639a36ee35f6eb6037f9ca60b499b226f415c"
     },
     {
       "name": "okx-uniswap",
       "type": "archive",
       "description": "Uniswap protocol integration for autonomous agents — direct V3/V4 contract interaction, Trading API swaps, V3 LP position management, and x402 payments on X Layer and EVM chains. Use when the user wants to: interact with Uniswap directly; manage V3 concentrated liquidity positions; execute swaps via Uniswap Trading API; provide liquidity and earn fees; rebalance LP positions; handle x402/HTTP 402 payments; compare OKX aggregator vs Uniswap routing; or build agent strategies around LP management. Designed for the X Layer Build X Hackathon (Skills Arena, Best Uniswap Integration prize). Chinese: Uniswap集成, V3流动性, 集中流动性, 手续费赚取, LP管理, 头寸再平衡, x402支付.",
       "url": "/.well-known/agent-skills/okx-uniswap.tar.gz",
-      "digest": "sha256:060e9db5083d0e69fc4b9f667a42ad34e8b42d886dcf5467d0b100946912240b",
+      "digest": "sha256:fb64615c41edd87a9caa455613820df78919c8cac230f5fb5167af4a91f3a8ae",
       "_contentHash": "5ace4c7a99ae104a6429580acad1979c3bd9b158a4c193f177dbbeead96cdf22"
+    },
+    {
+      "name": "okx-uniswap-dev",
+      "type": "archive",
+      "description": "Uniswap protocol development skill for building v4 hooks, deploying CCA auctions, integrating the Trading API and v4 SDK, managing concentrated liquidity, and handling x402 payments. Use when the user wants to: develop or audit Uniswap v4 hook contracts; configure and deploy Continuous Clearing Auctions (CCA); integrate the Uniswap Trading API or Universal Router for swaps; build swap frontends or backend scripts; manage V3/V4 concentrated liquidity positions; handle HTTP 402 / x402 payment challenges; interact with Uniswap contracts via viem; debug swap reverts, deployment failures, or hook issues. Chinese: Uniswap开发, V4钩子, CCA拍卖, 交易API, 集中流动性, x402支付, viem集成.",
+      "url": "/.well-known/agent-skills/okx-uniswap-dev.tar.gz",
+      "digest": "sha256:13c4b1388a16d2f784c7b7c36bc62bdd61edfff70421d30db4d48fc2b223a453",
+      "_contentHash": "291c12465e28383e56ec0c230f277722e8be1648befa840793bd8ad214ac9bb6"
     },
     {
       "name": "okx-xlayer-agent",
       "type": "archive",
       "description": "Autonomous agent skill for X Layer — build, trade, earn, and compete on X Layer's zero-gas L2. Use when creating or running an AI agent that autonomously trades, earns yield, pays for services, or interacts with other agents on X Layer (chain 196). Covers automated trading loops, DeFi auto-compounding, self-funding agents via x402, portfolio rebalancing, arbitrage scanning, and agent-to-agent interaction patterns. Designed for the X Layer Build X Hackathon's Skills Arena. Chinese: 自主代理, X Layer交易, 自动交易, 自动复投, 代理赚取, 代理交互.",
       "url": "/.well-known/agent-skills/okx-xlayer-agent.tar.gz",
-      "digest": "sha256:5685d2da25b48705e5f01b7a2312494b2875911d6195bb86b33db38bd201c309",
+      "digest": "sha256:cb10766c0c7c1f16ea0dc7d041c458dfde19090e6731490808099f8909f54e61",
       "_contentHash": "752e5d94cee26de53085854ecdd1deee242d5df35c867418bf756c627a798b69"
     }
   ]

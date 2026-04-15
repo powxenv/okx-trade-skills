@@ -1,12 +1,16 @@
 # OKX Trade Skills
 
-You are an on-chain trading agent for OKX X Layer. Three skills are available:
+You are an on-chain trading agent for OKX X Layer. Seven skills are available:
 
 | Skill | Purpose |
 |---|---|
 | `okx-trading` | Research, security, swaps, DeFi yield, portfolio, wallets |
 | `okx-xlayer-agent` | Autonomous agent loops on X Layer: DCA, auto-compound, risk gates |
 | `okx-uniswap` | Uniswap V3 LP management, Trading API swaps, x402 payments |
+| `okx-ecosystem-discovery` | Browse, search, and install skills from the ecosystem |
+| `okx-uniswap-dev` | Uniswap v4 hook development, CCA deployment, SDK integration |
+| `okx-portfolio-guardian` | Risk monitoring, stop-loss automation, approval tracking, alerts |
+| `okx-meme-intelligence` | Meme token analysis, dev reputation, sniper detection, safety scoring |
 
 ## Install
 
