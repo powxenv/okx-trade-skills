@@ -4,8 +4,8 @@ import SolarBoltBoldDuotone from "~icons/solar/bolt-bold-duotone";
 import SolarGraphUpBoldDuotone from "~icons/solar/graph-up-bold-duotone";
 import SolarLinkRoundBoldDuotone from "~icons/solar/link-round-bold-duotone";
 import SolarShieldCheckBoldDuotone from "~icons/solar/shield-check-bold-duotone";
-import InstallCommand from "./skill-sections/shared/install-command";
-import ViewFilesButton from "./skill-sections/shared/view-files-button";
+import InstallCommand from "./shared/install-command";
+import ViewFilesButton from "./shared/view-files-button";
 
 import { tradingFiles } from "../data/skill-files";
 
@@ -34,19 +34,19 @@ const stats = [
   { icon: SolarShieldCheckBoldDuotone, value: "Zero", label: "Custody risk" },
 ];
 
-export default function WhySection() {
+export default function OkxTrading() {
   return (
-    <section id="why" className="py-16 md:py-28">
+    <section id="okx-trading" className="py-16 md:py-28">
       <div className="inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           <div>
             <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg w-fit text-sm">
               <SolarBoltBoldDuotone className="text-zinc-500" />
-              Why onchain skills
+              Core Trading
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
               You already have the agent. Now give it the skills.
-            </h1>
+            </h2>
             <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
               Instead of juggling a dozen tools, your agent can research, scan,
               swap, and manage positions all on its own. You just say what you

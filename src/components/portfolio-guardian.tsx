@@ -10,7 +10,7 @@ import SolarDangerCircleBoldDuotone from "~icons/solar/danger-circle-bold-duoton
 import SolarRefreshCircleBoldDuotone from "~icons/solar/refresh-circle-bold-duotone";
 import SolarCheckCircleBoldDuotone from "~icons/solar/check-circle-bold-duotone";
 
-import { portfolioGuardianFiles } from "../../data/skill-files";
+import { portfolioGuardianFiles } from "../data/skill-files";
 
 const metrics = [
   { icon: <SolarShieldCheckBoldDuotone className="text-zinc-500" />, label: "Stop-Loss", value: "Auto 15%", detail: "Trigger active" },
@@ -26,7 +26,7 @@ const alerts = [
   { icon: <SolarShieldCheckBoldDuotone className="text-zinc-500" />, title: "Approval Revoked", msg: "Removed suspicious contract approval", time: "6h ago", status: "success" },
 ];
 
-export default function PortfolioGuardianSection() {
+export default function PortfolioGuardian() {
   return (
     <section id="okx-portfolio-guardian" className="py-16 md:py-28">
       <div className="inner">

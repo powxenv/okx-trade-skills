@@ -7,7 +7,7 @@ import SolarRocket2BoldDuotone from "~icons/solar/rocket-2-bold-duotone";
 import SolarArrowDownBoldDuotone from "~icons/solar/arrow-down-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 
-import { xlayerFiles } from "../../data/skill-files";
+import { xlayerFiles } from "../data/skill-files";
 
 const steps = [
   { num: "01", icon: <SolarEyeBoldDuotone className="text-zinc-500" />, title: "Monitor", desc: "Price feeds, whale tracking, arbitrage" },
@@ -15,7 +15,7 @@ const steps = [
   { num: "03", icon: <SolarRocket2BoldDuotone className="text-zinc-500" />, title: "Execute", desc: "Zero-gas txs, auto-compound, x402" },
 ];
 
-export default function XlayerAgentSection() {
+export default function XlayerAgent() {
   return (
     <section id="okx-xlayer-agent" className="py-16 md:py-28">
       <div className="inner">

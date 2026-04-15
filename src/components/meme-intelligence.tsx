@@ -6,7 +6,7 @@ import SolarUserCheckBoldDuotone from "~icons/solar/user-check-bold-duotone";
 import SolarUsersGroupRoundedBoldDuotone from "~icons/solar/users-group-rounded-bold-duotone";
 import SolarGraphUpBoldDuotone from "~icons/solar/graph-up-bold-duotone";
 
-import { memeIntelligenceFiles } from "../../data/skill-files";
+import { memeIntelligenceFiles } from "../data/skill-files";
 
 const analyses = [
   { label: "Dev Reputation", value: "Clean", status: "✓" },
@@ -27,7 +27,7 @@ const insights = [
   { icon: <SolarGraphUpBoldDuotone className="text-zinc-400" />, label: "Social Spike", value: "2.3K/hr" },
 ];
 
-export default function MemeIntelligenceSection() {
+export default function MemeIntelligence() {
   return (
     <section id="okx-meme-intelligence" className="py-16 md:py-28">
       <div className="inner">
@@ -37,7 +37,7 @@ export default function MemeIntelligenceSection() {
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
               badgeText="Meme Analysis"
               title="Meme Intelligence"
-              description="Deep meme token analysis with developer reputation scoring, sniper/bundler detection, bonding curve analysis, and multi-factor safety scoring."
+              description="Deep meme token analysis with developer reputation scoring, sniper and bundler detection, bonding curve analysis, and multi-factor safety scoring."
             />
 
             <InstallCommand skillName="okx-meme-intelligence" />

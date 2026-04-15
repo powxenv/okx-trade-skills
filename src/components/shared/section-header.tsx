@@ -15,7 +15,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <>
-      <div className="border pl-2 pr-4 py-1 gap-1 items-center rounded-lg text-sm inline-flex mb-4">
+      <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit mb-4">
         {badgeIcon}
         {badgeText}
       </div>

@@ -77,13 +77,13 @@ export default function EcosystemSection() {
     <section id="ecosystem" className="py-16 md:py-28">
       <div className="inner">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
-          <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm">
+          <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit">
             <SolarGlobalBoldDuotone className="text-zinc-500" />
             {ecosystemSkills.length + 1} Skills in the Ecosystem
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
             More skills, more chains, more coverage
-          </h1>
+          </h2>
           <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
             The ecosystem keeps growing. Grab skills from OKX OnchainOS,
             Uniswap AI, and beyond. One command to install, ready to use right

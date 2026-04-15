@@ -7,13 +7,13 @@ import SolarCardReciveBoldDuotone from "~icons/solar/card-recive-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 import SolarConfettiBoldDuotone from "~icons/solar/confetti-bold-duotone";
 
-import { uniswapFiles } from "../../data/skill-files";
+import { uniswapFiles } from "../data/skill-files";
 
 const features = [
   {
     icon: <SolarSortFromTopToBottomBoldDuotone className="text-zinc-500" />,
     title: "Direct Contract Access",
-    desc: "Interact with V3/V4 pools without intermediaries. Maximum control, minimum friction.",
+    desc: "Interact with V3 and V4 pools without intermediaries. Maximum control, minimum friction.",
     highlight: "V3 & V4 Ready",
   },
   {
@@ -36,7 +36,7 @@ const liveMetrics = [
   { label: "Active Pools", value: "1.2M", change: "+5.3%" },
 ];
 
-export default function UniswapSection() {
+export default function Uniswap() {
   return (
     <section id="okx-uniswap" className="py-16 md:py-28">
       <div className="inner">
@@ -67,7 +67,7 @@ export default function UniswapSection() {
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
               badgeText="Protocol Integration"
               title="Uniswap Direct"
-              description="Contract-level integration for Uniswap V3/V4. Manage concentrated liquidity, execute swaps, and handle x402 payments—all without leaving your agent."
+              description="Contract-level integration for Uniswap V3 and V4. Manage concentrated liquidity, execute swaps, and handle x402 payments, all without leaving your agent."
             />
 
             {/* Live Metrics */}

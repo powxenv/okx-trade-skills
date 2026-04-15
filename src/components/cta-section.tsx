@@ -30,7 +30,7 @@ function InstallTabs() {
           <div className="bg-zinc-100 rounded-xl">
             <div className="pr-2 pl-4 py-1 items-center flex justify-between">
               <span className="-tracking-wider font-medium">
-                Copy to your AI agents (any agent)
+                Copy to your AI agents, any agent
               </span>
               <Button isIconOnly size="sm" variant="ghost">
                 <SolarCopyLineDuotone />
@@ -147,13 +147,13 @@ export default function CtaSection() {
       <div className="inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div>
-            <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg w-fit text-sm">
+            <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit">
               <SolarRocket2BoldDuotone className="text-zinc-500" />
               Get started in seconds
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
               Start trading onchain today
-            </h1>
+            </h2>
             <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
               Copy the install command below and get started with autonomous
               onchain trading in seconds.

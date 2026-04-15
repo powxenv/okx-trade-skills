@@ -30,7 +30,7 @@ function InstallTabs() {
           <div className="bg-zinc-100 rounded-xl">
             <div className="pr-2 pl-4 py-1 items-center flex justify-between">
               <span className="-tracking-wider font-medium">
-                Copy to your AI agents (any agent)
+                Copy to your AI agents, any agent
               </span>
               <Button isIconOnly size="sm" variant="ghost">
                 <SolarCopyLineDuotone />
@@ -150,7 +150,7 @@ export default function HeroSection() {
     <main className="min-h-lvh flex items-center py-24 md:py-18">
       <div className="inner">
         <div className="max-w-2xl mx-auto text-center flex flex-col items-center">
-          <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm">
+          <div className="border pl-2 pr-4 py-1 flex gap-1 items-center rounded-lg text-sm w-fit">
             <SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />
             Installed 100+ times
           </div>

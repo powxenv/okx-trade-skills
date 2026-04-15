@@ -4,7 +4,7 @@ import SectionHeader from "./shared/section-header";
 import SolarCodeBoldDuotone from "~icons/solar/code-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 
-import { uniswapDevFiles } from "../../data/skill-files";
+import { uniswapDevFiles } from "../data/skill-files";
 
 const topics = ["v4 Hooks", "CCA", "Swap Planning", "Liquidity", "Trading API", "SDK", "viem", "x402"];
 
@@ -29,7 +29,7 @@ const resources = [
   { label: "Code Examples", count: "50+" },
 ];
 
-export default function UniswapDevSection() {
+export default function UniswapDev() {
   return (
     <section id="okx-uniswap-dev" className="py-16 md:py-28">
       <div className="inner">
