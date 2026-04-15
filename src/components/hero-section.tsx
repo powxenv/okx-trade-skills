@@ -5,8 +5,14 @@ import SolarPlanet2BoldDuotone from "~icons/solar/planet-2-bold-duotone";
 import SolarChartBoldDuotone from "~icons/solar/chart-bold-duotone";
 import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-minimlistic-bold-duotone";
 import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
+import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
+import { useCopy } from "../hooks/use-copy";
 
 function InstallTabs() {
+  const promptCopy = useCopy("Read https://okxskills.noval.me/AGENTS.md and install OKX Trade Skills on your system.");
+  const flinsCopy = useCopy("npx flins@latest add okxskills.noval.me");
+  const skillsCopy = useCopy("npx skills@latest add https://okxskills.noval.me");
+
   return (
     <Tabs className="w-full max-w-md">
       <Tabs.ListContainer>
@@ -32,8 +38,8 @@ function InstallTabs() {
               <span className="-tracking-wider font-medium">
                 Copy to your AI agents, any agent
               </span>
-              <Button isIconOnly size="sm" variant="ghost">
-                <SolarCopyLineDuotone />
+              <Button isIconOnly size="sm" variant="ghost" onClick={promptCopy.copy}>
+                {promptCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
               </Button>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200">
@@ -50,8 +56,8 @@ function InstallTabs() {
               <span className="-tracking-wider font-medium">
                 Copy to your terminal
               </span>
-              <Button isIconOnly size="sm" variant="ghost">
-                <SolarCopyLineDuotone />
+              <Button isIconOnly size="sm" variant="ghost" onClick={flinsCopy.copy}>
+                {flinsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
               </Button>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200 font-mono text-sm">
@@ -67,8 +73,8 @@ function InstallTabs() {
               <span className="-tracking-wider font-medium">
                 Copy to your terminal
               </span>
-              <Button isIconOnly size="sm" variant="ghost">
-                <SolarCopyLineDuotone />
+              <Button isIconOnly size="sm" variant="ghost" onClick={skillsCopy.copy}>
+                {skillsCopy.copied ? <SolarCheckCircleLineDuotone /> : <SolarCopyLineDuotone />}
               </Button>
             </div>
             <div className="bg-zinc-800 p-4 rounded-xl text-zinc-200 font-mono text-sm">

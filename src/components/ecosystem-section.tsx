@@ -3,9 +3,10 @@ import { ecosystemSkills } from "../data/ecosystem-skills";
 import SolarGlobalBoldDuotone from "~icons/solar/global-bold-duotone";
 import SolarArrowRightUpBoldDuotone from "~icons/solar/arrow-right-up-bold-duotone";
 import SolarCopyLineDuotone from "~icons/solar/copy-line-duotone";
-import SolarCheckCircleBoldDuotone from "~icons/solar/check-circle-bold-duotone";
+import SolarCheckCircleLineDuotone from "~icons/solar/check-circle-line-duotone";
 import SolarStarBoldDuotone from "~icons/solar/star-bold-duotone";
 import { Button } from "@heroui/react";
+import InstallCommand from "./shared/install-command";
 
 function SkillCard({
   name,
@@ -61,7 +62,7 @@ function SkillCard({
           </code>
           <div>
             {copied ? (
-              <SolarCheckCircleBoldDuotone className="size-4 text-zinc-200" />
+              <SolarCheckCircleLineDuotone className="size-4 text-zinc-200" />
             ) : (
               <SolarCopyLineDuotone className="size-4 text-zinc-400" />
             )}
@@ -99,21 +100,7 @@ export default function EcosystemSection() {
           <p className="text-sm text-zinc-600 mb-4">
             Browse and search skills from the OKX ecosystem. Find skills for DeFi, swapping, security, LP management, and get help choosing the right one.
           </p>
-          <button
-            className="border rounded-xl p-1 w-full max-w-2xl cursor-pointer"
-            onClick={(e) => {
-              e.preventDefault();
-              const command = "npx flins@latest add okxskills.noval.me --skill okx-ecosystem-discovery";
-              navigator.clipboard.writeText(command);
-            }}
-          >
-            <div className="bg-zinc-800 px-3 py-2 rounded-lg flex items-center justify-between gap-2">
-              <code className="text-zinc-200 font-mono text-xs truncate">
-                npx flins@latest add okxskills.noval.me --skill okx-ecosystem-discovery
-              </code>
-              <SolarCopyLineDuotone className="size-4 text-zinc-400" />
-            </div>
-          </button>
+          <InstallCommand skillName="okx-ecosystem-discovery" className="mt-0 mx-0" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
