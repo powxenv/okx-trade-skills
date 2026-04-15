@@ -3,8 +3,7 @@ import { Button, Drawer, useOverlayState } from "@heroui/react";
 import SolarHamburgerMenuLinear from "~icons/solar/hamburger-menu-linear";
 
 const links = [
-  { label: "Why", href: "#why" },
-  { label: "Skills", href: "#okx-uniswap" },
+  { label: "Skills", href: "#okx-trading" },
   { label: "Ecosystem", href: "#ecosystem" },
   { label: "Install", href: "#install" },
   {
