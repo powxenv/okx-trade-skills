@@ -91,9 +91,8 @@ function TrustCards() {
           </div>
           <h3 className="text-lg mt-1 mb-2">Non-custodial by design</h3>
           <p>
-            Your keys never leave your wallet. Every transaction is signed
-            locally and every skill runs on your machine. No middlemen, no
-            server-side access.
+            Your keys never leave your wallet. Transactions are signed locally
+            and skills run on your machine. No middlemen, no server access.
           </p>
         </div>
       </div>
@@ -106,8 +105,7 @@ function TrustCards() {
           <h3 className="text-lg mt-1 mb-2">Built-in safety rails</h3>
           <p>
             Honeypot detection, slippage limits, and risk scoring run before
-            every trade. Autonomous agents follow strict guardrails you define
-            and control.
+            every trade. Your agent follows the guardrails you set.
           </p>
         </div>
       </div>
@@ -119,8 +117,8 @@ function TrustCards() {
           </div>
           <h3 className="text-lg mt-1 mb-2">Battle-tested by traders</h3>
           <p>
-            Installed and relied on by real onchain traders. Every workflow and
-            strategy is derived from live market experience, not theory.
+            Real traders use these skills every day. Every workflow comes from
+            live market experience, not theory.
           </p>
         </div>
       </div>
@@ -132,8 +130,8 @@ function TrustCards() {
           </div>
           <h3 className="text-lg mt-1 mb-2">Always up to date</h3>
           <p>
-            Skills update with the latest chain support, protocol changes, and
-            market data. Run one command to pull the latest and stay current.
+            Skills update with the latest chains and protocols. One command
+            pulls the latest changes.
           </p>
         </div>
       </div>
@@ -155,8 +153,8 @@ export default function CtaSection() {
               Start trading onchain today
             </h2>
             <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
-              Copy the install command below and get started with autonomous
-              onchain trading in seconds.
+              Copy the command below and you're seconds away from autonomous
+              onchain trading.
             </p>
 
             <InstallTabs />

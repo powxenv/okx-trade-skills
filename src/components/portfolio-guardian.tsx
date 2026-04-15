@@ -65,8 +65,8 @@ export default function PortfolioGuardian() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
               badgeText="Risk Protection"
-              title="Portfolio Guardian"
-              description="Real-time wallet monitoring with stop-loss automation, impermanent loss tracking, approval auditing, and price alerts."
+              title="Your portfolio watched while you sleep"
+              description="Stop checking prices every 5 minutes. Set stop-loss triggers, track impermanent loss, and get pinged when something actually needs your attention."
             />
 
             <div className="grid grid-cols-2 gap-3">

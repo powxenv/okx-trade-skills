@@ -10,9 +10,9 @@ import SolarArchiveDownMinimlisticBoldDuotone from "~icons/solar/archive-down-mi
 import { xlayerFiles } from "../data/skill-files";
 
 const steps = [
-  { num: "01", icon: <SolarEyeBoldDuotone className="text-zinc-500" />, title: "Monitor", desc: "Price feeds, whale tracking, arbitrage" },
-  { num: "02", icon: <SolarBoltBoldDuotone className="text-zinc-500" />, title: "Decide", desc: "Strategy, risk assessment, gas opt" },
-  { num: "03", icon: <SolarRocket2BoldDuotone className="text-zinc-500" />, title: "Execute", desc: "Zero-gas txs, auto-compound, x402" },
+  { num: "01", icon: <SolarEyeBoldDuotone className="text-zinc-500" />, title: "Watch", desc: "Track prices, whales, and arb opportunities across the chain" },
+  { num: "02", icon: <SolarBoltBoldDuotone className="text-zinc-500" />, title: "Decide", desc: "Run your strategy, check risk, optimize for gas" },
+  { num: "03", icon: <SolarRocket2BoldDuotone className="text-zinc-500" />, title: "Execute", desc: "Zero-gas txs, auto-compound, pay with x402" },
 ];
 
 export default function XlayerAgent() {
@@ -24,8 +24,8 @@ export default function XlayerAgent() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
               badgeText="Autonomous Agents"
-              title="X Layer Agent"
-              description="Build autonomous agents that trade, earn, and compete on X Layer's zero-gas L2. Self-funding via x402, infinite loops."
+              title="Agents that run forever on zero gas"
+              description="X Layer has no gas fees. Your agent can trade, compound, and pay for itself using x402 without you ever topping up."
             />
 
             <div className="grid grid-cols-3 gap-6">

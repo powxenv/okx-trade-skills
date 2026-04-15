@@ -90,11 +90,11 @@ function FeatureCards() {
             <SolarWadOfMoneyBoldDuotone className="text-zinc-500" />
           </div>
           <h3 className="text-lg mt-1 mb-2">
-            Execute swaps with safety built in
+            Swap with safety built in
           </h3>
           <p>
-            Get price quotes across 500+ DEXes, run honeypot scans before every
-            trade, and execute with slippage protection and MEV defense.
+            Get prices across 500+ DEXes, scan for honeypots before every trade,
+            and execute with slippage protection.
           </p>
         </div>
       </div>
@@ -104,11 +104,10 @@ function FeatureCards() {
           <div className="size-10 border flex justify-center items-center rounded-lg">
             <SolarBag4BoldDuotone className="text-zinc-500" />
           </div>
-          <h3 className="text-lg mt-1 mb-2">Run autonomous trading agents</h3>
+          <h3 className="text-lg mt-1 mb-2">Run autonomous trading bots</h3>
           <p>
-            Deploy self-managing bots that follow smart money signals, rebalance
-            portfolios, and compound DeFi yields. Manual, semi-auto, or
-            full-auto modes.
+            Deploy agents that follow smart money, rebalance portfolios,
+            and compound yields. Manual, semi-auto, or full-auto.
           </p>
         </div>
       </div>
@@ -122,9 +121,8 @@ function FeatureCards() {
             Stake, lend, and provide liquidity
           </h3>
           <p>
-            Access DeFi protocols across chains. Deposit into yield farms,
-            manage V3 LP positions, and auto-compound rewards with gas-optimized
-            rebalancing.
+            Access DeFi across chains. Deposit into yield farms,
+            manage V3 LP positions, and auto-compound rewards.
           </p>
         </div>
       </div>
@@ -136,8 +134,8 @@ function FeatureCards() {
           </div>
           <h3 className="text-lg mt-1 mb-2">Research before you trade</h3>
           <p>
-            Analyze token metrics, track whale and KOL wallets, monitor trending
-            memes, and get real-time PnL analytics. Data-driven decisions only.
+            Check token metrics, track whale wallets, monitor trending memes,
+            and get real-time PnL.
           </p>
         </div>
       </div>
@@ -155,7 +153,7 @@ export default function HeroSection() {
             Installed 100+ times
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 mt-4">
-            Trade onchain with AI agents that actually work
+            Trade onchain with agents that actually work
           </h1>
           <p className="max-w-xl text-base sm:text-lg md:text-xl text-zinc-600">
             A skill library for autonomous trading. Research tokens, scan for

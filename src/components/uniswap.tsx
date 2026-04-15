@@ -13,19 +13,19 @@ const features = [
   {
     icon: <SolarSortFromTopToBottomBoldDuotone className="text-zinc-500" />,
     title: "Direct Contract Access",
-    desc: "Interact with V3 and V4 pools without intermediaries. Maximum control, minimum friction.",
-    highlight: "V3 & V4 Ready",
+    desc: "Skip the frontend. Talk to pools directly through your agent with zero UI friction.",
+    highlight: "V3 and V4 Ready",
   },
   {
     icon: <SolarUsersGroupRoundedBoldDuotone className="text-zinc-500" />,
     title: "Concentrated Liquidity",
-    desc: "Manage positions with custom tick ranges. Rebalance automatically as price moves.",
+    desc: "Manage LP positions with custom tick ranges. Auto-rebalance when price moves out of bounds.",
     highlight: "Auto Rebalance",
   },
   {
     icon: <SolarCardReciveBoldDuotone className="text-zinc-500" />,
     title: "x402 Payments",
-    desc: "Pay for APIs using tokens via Uniswap. Self-funding agents on X Layer.",
+    desc: "Pay for API calls using the tokens you're trading. Your agent funds itself on X Layer.",
     highlight: "Zero Gas Layer",
   },
 ];
@@ -66,8 +66,8 @@ export default function Uniswap() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
               badgeText="Protocol Integration"
-              title="Uniswap Direct"
-              description="Contract-level integration for Uniswap V3 and V4. Manage concentrated liquidity, execute swaps, and handle x402 payments, all without leaving your agent."
+              title="Uniswap, straight from the terminal"
+              description="Your agent can swap, add liquidity, and manage positions on Uniswap without ever opening a browser."
             />
 
             {/* Live Metrics */}
@@ -75,7 +75,7 @@ export default function Uniswap() {
               <div className="flex items-center gap-2 mb-4">
                 <SolarConfettiBoldDuotone className="size-4 text-zinc-400" />
                 <span className="text-sm font-medium">Live Protocol Data</span>
-                <span className="text-sm text-zinc-600 ml-auto">Updated real-time</span>
+                <span className="text-sm text-zinc-600 ml-auto">Updated in real time</span>
               </div>
               <div className="space-y-3">
                 {liveMetrics.map((metric) => (

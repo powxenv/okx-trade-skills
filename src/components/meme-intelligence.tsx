@@ -36,8 +36,8 @@ export default function MemeIntelligence() {
             <SectionHeader
               badgeIcon={<SolarArchiveDownMinimlisticBoldDuotone className="text-zinc-500" />}
               badgeText="Meme Analysis"
-              title="Meme Intelligence"
-              description="Deep meme token analysis with developer reputation scoring, sniper and bundler detection, bonding curve analysis, and multi-factor safety scoring."
+              title="Stop buying rugs, start catching gems"
+              description="Most meme tokens are rugs. This skill checks the dev's history, spots snipers early, and shows you exactly where the token is on the bonding curve before you ape in."
             />
 
             <InstallCommand skillName="okx-meme-intelligence" />
